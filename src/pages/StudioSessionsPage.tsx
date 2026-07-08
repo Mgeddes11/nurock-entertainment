@@ -1,0 +1,64 @@
+import { StudioFeatureCard } from "../components/molecules/StudioFeatureCard";
+import { hubspot } from "../config/hubspot";
+import { studioSessionsCopy } from "../data/studioSessionsCopy";
+
+const INTRO_BG_IMAGE =
+  "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1920&q=80";
+
+export function StudioSessionsPage() {
+  const { intro, cta, features } = studioSessionsCopy;
+  const meetingUrl = hubspot.meetingUrlSessions;
+
+  return (
+    <div className="pb-24 pt-32">
+      <section className="page-section mb-16 overflow-hidden md:mb-20">
+        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-white/8">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${INTRO_BG_IMAGE})` }}
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-base-100/58" aria-hidden />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(221,178,74,0.22),transparent_32%)]" aria-hidden />
+          <div className="relative z-10 p-7 md:p-10 lg:p-12">
+            <span className="eyebrow-label mb-4">Studio Sessions</span>
+            <h1 className="lux-heading text-5xl uppercase text-base-content md:text-6xl">
+              {intro.headline}
+            </h1>
+            <div className="gold-rule mt-5 mb-8" />
+            <p className="mb-6 max-w-3xl text-xl leading-8 text-base-content/84">{intro.tagline2}</p>
+            <p className="mb-10 max-w-2xl text-base leading-8 text-base-content/58">{intro.subline}</p>
+            {meetingUrl && (
+              <a
+                href={meetingUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="premium-button inline-flex items-center gap-2 px-8 py-4 text-[0.78rem] font-extrabold uppercase tracking-[0.26em]"
+              >
+                {cta.label}
+                <span className="material-symbols-outlined text-xl inline-block" aria-hidden>
+                  open_in_new
+                </span>
+              </a>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="space-y-16 md:space-y-20">
+          {features.map((feature, index) => (
+            <StudioFeatureCard
+              key={feature.id}
+              title={feature.title}
+              description={feature.description}
+              imageUrl={feature.imageUrl}
+              imageAlt={feature.imageAlt}
+              layout={index % 2 === 0 ? "image-left" : "image-right"}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
