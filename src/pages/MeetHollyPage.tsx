@@ -5,7 +5,7 @@ export function MeetHollyPage() {
     <section className="relative overflow-hidden pt-32 pb-24">
       <div className="page-section">
         <div className="panel-surface mx-auto max-w-5xl rounded-[2rem] p-6 md:p-8 lg:p-10">
-          <span className="eyebrow-label mb-4">NuRock Founder</span>
+          <span className="eyebrow-label mb-4">NuRock Entertainment Founder</span>
           <h1 className="lux-heading text-5xl uppercase text-base-content md:text-6xl">Meet Holly</h1>
           <div className="gold-rule mt-5 mb-10" />
 
@@ -33,7 +33,7 @@ export function MeetHollyPage() {
                   Whether working with an A-list artist, an underground talent, or someone just beginning their creative journey, Holly has the ability to meet artists where they are and help pull out what they may not even know is inside them. From breaking through writer&apos;s block to giving a song, project, or album that final push it needs, he creates the space for artists to go deeper, trust their instincts, and bring their vision fully to life.
                 </p>
                 <p>
-                  Holly produces across every genre, from hip-hop and dark trap to R&amp;B, pop, EDM, and cinematic records. He adapts to the artist while still bringing his own identity, taste, and energy to every track. Having worked with a wide range of artists, Holly knows how to create the kind of space that pulls the best out of every session.
+                  Holly produces across every genre, from Hip-Hop and Dark Trap to R&amp;B, Pop, EDM, and Cinematic records. He adapts to the artist while still bringing his own identity, taste, and energy to every track. Having worked with a wide range of artists, Holly knows how to create the kind of space that pulls the best out of every session.
                 </p>
               </div>
             </div>
