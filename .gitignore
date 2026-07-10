@@ -24,3 +24,12 @@ dist-ssr
 *.sln
 *.sw?
 music-archive
+.terraform
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
