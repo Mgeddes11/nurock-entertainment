@@ -13,7 +13,7 @@ module "static_site" {
   aws_accounts_with_read_view_log_bucket = [local.aws_account]
 
   create_route53_hosted_zone = false
-  route53_hosted_zone_id     = data.aws_route53_zone.root.zone_id
+  route53_hosted_zone_id     = aws_route53_zone.root.zone_id
 
   create_acm_certificate = true
 
