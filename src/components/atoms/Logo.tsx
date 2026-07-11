@@ -13,7 +13,7 @@ export function Logo({ to = "/", className = "", variant = "light" }: Props) {
     <img
       src="/logo.svg"
       alt="NuRock Entertainment"
-      className="h-8 w-auto max-w-[180px] md:max-w-[220px] object-contain object-left"
+      className="h-7 w-auto max-w-[140px] object-contain object-left sm:h-8 sm:max-w-[180px] md:max-w-[220px]"
       style={{ filter }}
     />
   );

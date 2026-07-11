@@ -48,10 +48,46 @@
 html {
   font-family: var(--font-display);
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+:root {
+  --nav-bar-height: 4rem;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --nav-offset: calc(var(--nav-bar-height) + var(--safe-top));
+}
+
+@media (min-width: 640px) {
+  :root {
+    --nav-bar-height: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-bar-height: 6rem;
+  }
+}
+
+.pt-nav {
+  padding-top: var(--nav-offset);
+}
+
+.pt-nav-roomy-sm {
+  padding-top: calc(var(--nav-offset) + 1rem);
+}
+
+.pt-nav-roomy {
+  padding-top: calc(var(--nav-offset) + 2rem);
+}
+
+.nav-drawer-top {
+  top: var(--nav-offset);
 }
 
 body {
   margin: 0;
+  overflow-x: clip;
   min-height: 100vh;
   background-color: hsl(var(--b1));
   background-image:

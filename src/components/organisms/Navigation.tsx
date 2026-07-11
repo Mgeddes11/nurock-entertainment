@@ -18,9 +18,9 @@ export function Navigation() {
 
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[linear-gradient(180deg,rgba(24,19,14,0.9),rgba(24,19,14,0.72))] backdrop-blur-2xl">
-        <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4">
+      <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[linear-gradient(180deg,rgba(24,19,14,0.9),rgba(24,19,14,0.72))] backdrop-blur-2xl pt-[env(safe-area-inset-top,0px)]">
+        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-2 px-4 sm:h-20 sm:px-6 lg:h-24 lg:px-8">
+          <div className="flex min-w-0 shrink items-center gap-3">
             <Logo to="/" className="transition-transform duration-300 hover:scale-[1.02]" />
           </div>
 
@@ -32,8 +32,8 @@ export function Navigation() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3">
-            <Link to="/studio-sessions" className="hidden sm:inline-flex">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+            <Link to="/studio-sessions" className="hidden md:inline-flex">
               <ButtonPrimary>Book Session</ButtonPrimary>
             </Link>
             <button
@@ -53,7 +53,7 @@ export function Navigation() {
 
       <div
         className={
-          "fixed inset-x-4 top-24 z-40 rounded-[1.75rem] panel-surface p-4 transition-all duration-300 lg:hidden " +
+          "nav-drawer-top fixed inset-x-4 z-40 rounded-[1.75rem] panel-surface p-4 transition-all duration-300 lg:hidden " +
           (isOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-4 opacity-0")
         }
       >
@@ -68,7 +68,7 @@ export function Navigation() {
               {label}
             </Link>
           ))}
-          <Link to="/studio-sessions" onClick={() => setIsOpen(false)} className="pt-2 sm:hidden">
+          <Link to="/studio-sessions" onClick={() => setIsOpen(false)} className="pt-2 md:hidden">
             <ButtonPrimary className="w-full justify-center">Book Session</ButtonPrimary>
           </Link>
         </div>

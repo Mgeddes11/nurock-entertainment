@@ -8,7 +8,7 @@ export function InstrumentalsPage() {
     "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1920&q=80";
 
   return (
-    <div className="relative min-h-screen pt-28 pb-24 overflow-hidden">
+    <div className="relative min-h-screen pt-nav-roomy-sm pb-24 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${PAGE_BG})` }}
