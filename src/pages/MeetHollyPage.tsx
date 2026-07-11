@@ -24,16 +24,19 @@ export function MeetHollyPage() {
               <h2 className="mb-6 text-3xl font-black text-base-content md:text-4xl">Holly NuRock</h2>
               <div className="space-y-5 text-base leading-8 text-base-content/82 md:text-[1.03rem]">
                 <p>
-                  Born and raised in Southern California, Holly NuRock comes from the heart of the Los Angeles underground hip-hop scene. That foundation shaped his sound: raw, honest, emotional, and built on feel.
+                  Born and raised in Southern California, Holly NuRock is a second-generation music entrepreneur who has been immersed in music and entertainment his entire life. Growing up around the business gave him an early understanding of not only how records are created, but how artists, careers, and lasting creative identities are built.
+                </p>
+                <p>
+                  Coming from the heart of the Los Angeles underground hip-hop scene, Holly developed a sound and approach that are raw, honest, emotional, and built on feel.
                 </p>
                 <p>
                   Holly is more than a producer. He is a muse to the artist. His gift is helping artists unlock what already lives inside them: their voice, their story, their sonic palette, and the colors that make them different. Through music production, songwriting, mentorship, and deep creative direction, Holly helps artists tap into who they truly are and transform raw emotion into fully realized records.
                 </p>
                 <p>
-                  Whether working with an A-list artist, an underground talent, or someone just beginning their creative journey, Holly has the ability to meet artists where they are and help pull out what they may not even know is inside them. From breaking through writer&apos;s block to giving a song, project, or album that final push it needs, he creates the space for artists to go deeper, trust their instincts, and bring their vision fully to life.
+                  Whether working with an A-list artist, an underground talent, or someone just beginning their creative journey, Holly has the ability to meet artists where they are and pull out what they may not even know is inside them. From breaking through writer&apos;s block to giving a song, project, or album the final push it needs, he creates the space for artists to go deeper, trust their instincts, and bring their vision fully to life.
                 </p>
                 <p>
-                  Holly produces across every genre, from Hip-Hop and Dark Trap to R&amp;B, Pop, EDM, and Cinematic records. He adapts to the artist while still bringing his own identity, taste, and energy to every track. Having worked with a wide range of artists, Holly knows how to create the kind of space that pulls the best out of every session.
+                  Holly produces across every genre, from Hip-Hop and Dark Trap to R&amp;B, Pop, EDM, and cinematic records. He adapts to the artist while still bringing his own identity, taste, and energy to every track. Having worked with a wide range of artists, Holly knows how to create the kind of environment that pulls the best out of every session.
                 </p>
               </div>
             </div>
