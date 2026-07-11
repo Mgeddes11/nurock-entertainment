@@ -7,7 +7,7 @@ export function ProductionLessonsPage() {
   const meetingUrl = hubspot.meetingUrlLessons || hubspot.meetingUrlSessions;
 
   return (
-    <div className="pb-24 pt-nav-roomy">
+    <div className="py-8 pb-16 sm:py-10">
       <section className="page-section mb-16 md:mb-20">
         <div className="panel-surface mx-auto max-w-4xl rounded-[2rem] p-7 md:p-10 lg:p-12">
           <span className="eyebrow-label mb-4">NuRock Academy</span>

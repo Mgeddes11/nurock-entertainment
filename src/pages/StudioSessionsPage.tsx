@@ -10,7 +10,7 @@ export function StudioSessionsPage() {
   const meetingUrl = hubspot.meetingUrlSessions;
 
   return (
-    <div className="pb-24 pt-nav-roomy">
+    <div className="py-8 pb-16 sm:py-10">
       <section className="page-section mb-16 overflow-hidden md:mb-20">
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-white/8">
           <div

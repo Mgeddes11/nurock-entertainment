@@ -51,48 +51,12 @@ html {
   overflow-x: clip;
 }
 
-:root {
-  --nav-bar-height: 4rem;
-  --safe-top: env(safe-area-inset-top, 0px);
-  --nav-offset: calc(var(--nav-bar-height) + var(--safe-top));
+.site-header {
+  width: 100%;
 }
 
-@media (min-width: 640px) {
-  :root {
-    --nav-bar-height: 5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --nav-bar-height: 6rem;
-  }
-}
-
-.pt-nav {
-  padding-top: var(--nav-offset);
-}
-
-.pt-nav-roomy-sm {
-  padding-top: var(--nav-offset);
-}
-
-.pt-nav-roomy {
-  padding-top: var(--nav-offset);
-}
-
-@media (min-width: 768px) {
-  .pt-nav-roomy-sm {
-    padding-top: calc(var(--nav-offset) + 1rem);
-  }
-
-  .pt-nav-roomy {
-    padding-top: calc(var(--nav-offset) + 2rem);
-  }
-}
-
-.nav-drawer-top {
-  top: var(--nav-offset);
+.site-mobile-menu {
+  top: calc(env(safe-area-inset-top, 0px) + 3.75rem);
 }
 
 body {
@@ -112,12 +76,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (min-width: 768px) {
-  body {
-    background-attachment: fixed;
-  }
 }
 
 body::before {

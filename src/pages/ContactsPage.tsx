@@ -3,7 +3,7 @@ import { contactFormEndpoint } from "../config/hubspot";
 
 export function ContactsPage() {
   return (
-    <section className="relative overflow-hidden pt-nav-roomy pb-24">
+    <section className="relative overflow-hidden py-8 pb-16 sm:py-10">
       <div className="page-section">
         <div className="mx-auto max-w-3xl">
           <div className="mb-10">

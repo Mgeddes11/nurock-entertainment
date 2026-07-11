@@ -4,7 +4,7 @@ export function Hero() {
   const { hero } = siteCopy;
 
   return (
-    <section className="relative flex min-h-0 items-start overflow-hidden pt-nav pb-10 sm:pb-14 md:min-h-screen md:items-center md:pb-0">
+    <section className="relative overflow-hidden py-8 sm:py-12 md:min-h-[85vh] md:py-16 lg:min-h-screen lg:py-20">
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -26,16 +26,16 @@ export function Hero() {
       </div>
 
       <div className="page-section relative z-20">
-        <div className="panel-surface max-w-4xl rounded-[2rem] p-7 sm:p-8 md:p-10 lg:p-12">
+        <div className="panel-surface max-w-4xl rounded-[2rem] p-6 sm:p-8 md:p-10 lg:p-12">
           <span className="eyebrow-label mb-6">NuRock Entertainment</span>
-          <h1 className="mb-8 md:mb-10">
+          <h1 className="mb-6 md:mb-10">
             <img
               src="/logo-hero.svg"
               alt="NuRock Entertainment"
-              className="logo-neon-glow h-20 w-auto max-w-full object-contain object-left sm:h-24 md:h-28 lg:h-32 xl:h-36"
+              className="logo-neon-glow h-16 w-auto max-w-full object-contain object-left sm:h-20 md:h-28 lg:h-32"
             />
           </h1>
-          <p className="max-w-3xl text-base leading-8 text-base-content/82 md:text-lg md:leading-9 lg:text-[1.24rem]">
+          <p className="max-w-3xl text-base leading-8 text-base-content/82 md:text-lg md:leading-9">
             {hero.tagline.split("NuRock Entertainment").map((part, i, arr) =>
               i < arr.length - 1 ? (
                 <span key={i}>

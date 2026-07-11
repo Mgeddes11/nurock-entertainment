@@ -2,7 +2,7 @@ const BIO_IMAGE = "/assets/holly-bio.jpg";
 
 export function MeetHollyPage() {
   return (
-    <section className="relative overflow-hidden pt-nav-roomy pb-24">
+    <section className="relative overflow-hidden py-8 pb-16 sm:py-10">
       <div className="page-section">
         <div className="panel-surface mx-auto max-w-5xl rounded-[2rem] p-6 md:p-8 lg:p-10">
           <span className="eyebrow-label mb-4">NuRock Entertainment Founder</span>

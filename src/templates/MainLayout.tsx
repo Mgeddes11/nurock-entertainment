@@ -4,9 +4,9 @@ import { Footer } from "../components/organisms/Footer";
 
 export function MainLayout() {
   return (
-    <div className="page-shell flex min-h-screen flex-col">
+    <div className="page-shell">
       <Navigation />
-      <main className="flex-1">
+      <main>
         <Outlet />
       </main>
       <Footer />

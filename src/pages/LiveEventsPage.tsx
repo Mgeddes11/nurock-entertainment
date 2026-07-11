@@ -3,7 +3,7 @@ import { events } from "../data/events";
 
 export function LiveEventsPage() {
   return (
-    <section className="relative overflow-hidden pt-nav-roomy pb-24">
+    <section className="relative overflow-hidden py-8 pb-16 sm:py-10">
       <div className="page-section">
         <div className="mx-auto max-w-5xl">
           <div className="mb-12">
