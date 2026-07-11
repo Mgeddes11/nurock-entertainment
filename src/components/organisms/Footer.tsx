@@ -13,7 +13,7 @@ export function Footer() {
 
       <div className="page-section relative">
         <div className="panel-surface rounded-[2rem] p-8 md:p-10 lg:p-12">
-          <div className="grid gap-12 lg:grid-cols-[1.6fr_0.8fr] lg:items-start">
+          <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
             <div>
               <Logo to="/" className="mb-6" />
               <p className="max-w-xl text-sm leading-7 text-base-content/66 md:text-[0.95rem]">
@@ -37,11 +37,11 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="rounded-[1.5rem] border border-white/8 bg-white/3 p-6 md:p-7">
+            <div className="min-w-0 w-full rounded-[1.5rem] border border-white/8 bg-white/3 p-6 md:p-7">
               <span className="eyebrow-label mb-5">Contact</span>
               <a
                 href={`mailto:${footer.connect.email}`}
-                className="block break-all text-sm font-semibold uppercase tracking-[0.22em] text-base-content/82 hover:text-primary md:text-[0.8rem]"
+                className="block break-all text-[0.78rem] font-semibold normal-case leading-7 tracking-normal text-base-content/82 hover:text-primary sm:text-sm sm:leading-8"
               >
                 {footer.connect.email}
               </a>
