@@ -9,7 +9,7 @@ export function ArtistDevelopmentPage() {
   const { artistDevelopment } = siteCopy;
 
   return (
-    <section className="relative min-h-[80vh] overflow-hidden pt-nav-roomy pb-24">
+    <section className="relative min-h-0 md:min-h-[80vh] overflow-hidden pt-nav-roomy pb-24">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${PAGE_BG_IMAGE})` }}

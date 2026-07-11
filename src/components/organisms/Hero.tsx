@@ -4,7 +4,7 @@ export function Hero() {
   const { hero } = siteCopy;
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pt-nav">
+    <section className="relative flex min-h-0 items-start overflow-hidden pt-nav pb-10 sm:pb-14 md:min-h-screen md:items-center md:pb-0">
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

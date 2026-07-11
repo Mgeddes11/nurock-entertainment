@@ -18,9 +18,9 @@ export function Navigation() {
 
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[linear-gradient(180deg,rgba(24,19,14,0.9),rgba(24,19,14,0.72))] backdrop-blur-2xl pt-[env(safe-area-inset-top,0px)]">
+      <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[rgba(20,16,12,0.96)] shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur-xl pt-[env(safe-area-inset-top,0px)]">
         <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-2 px-4 sm:h-20 sm:px-6 lg:h-24 lg:px-8">
-          <div className="flex min-w-0 shrink items-center gap-3">
+          <div className="flex shrink-0 items-center gap-3">
             <Logo to="/" className="transition-transform duration-300 hover:scale-[1.02]" />
           </div>
 
@@ -41,7 +41,7 @@ export function Navigation() {
               aria-label="Toggle navigation"
               aria-expanded={isOpen}
               onClick={() => setIsOpen((value) => !value)}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/4 text-base-content transition-all duration-300 hover:border-primary/40 hover:bg-white/8 lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center sm:h-11 sm:w-11 rounded-full border border-white/10 bg-white/4 text-base-content transition-all duration-300 hover:border-primary/40 hover:bg-white/8 lg:hidden"
             >
               <span className="material-symbols-outlined text-[1.35rem]">
                 {isOpen ? "close" : "menu"}
