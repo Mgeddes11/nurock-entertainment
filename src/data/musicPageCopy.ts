@@ -46,7 +46,7 @@ export const musicPageCopy = {
         appleMusicEmbedUrl: "",
         appleMusicUrl: "https://music.apple.com/us/album/hot-box-2-slots-blocked-single/1804435289",
         spotifyUrl: "https://open.spotify.com/track/4R1BOp6WFRWThVAAesw5I0?si=3ebbc203c1674c18",
-        songList: ["Hot Box 2 (Slots Blocked)", "Hot Box", "Bay Bae", "Freak For Love", "A Better Man", "Tribe"],
+        songList: ["Hot Box 2 (Slots Blocked)"],
       },
       {
         id: "myint",
