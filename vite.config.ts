@@ -8,6 +8,10 @@ export default defineConfig(({ mode }) => {
   const siteOrigin = env.VITE_SITE_ORIGIN || 'https://nurockentertainment.com'
 
   return {
+    server: {
+      host: '127.0.0.1',
+      port: 5173,
+    },
     plugins: [
       tailwindcss(),
       react(),
