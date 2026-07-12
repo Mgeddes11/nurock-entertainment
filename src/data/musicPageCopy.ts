@@ -24,7 +24,7 @@ export const musicPageCopy = {
 
   artistSection: {
     eyebrow: "Selected Collaborations",
-    title: "Holly NuRock × Featured Artists",
+    title: "Holly NuRock × Artists",
     intro:
       "A curated glimpse into the artists, records, and creative worlds Holly NuRock has helped bring to life.",
     items: [
