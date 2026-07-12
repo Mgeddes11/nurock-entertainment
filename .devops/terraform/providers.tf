@@ -14,16 +14,13 @@ provider "aws" {
 
 data "aws_caller_identity" "current" {}
 
-resource "aws_route53_zone" "root" {
-  provider = aws.us-east-1
-  name     = local.root_domain
-
-  tags = merge(local.tags, {
-    Name = "${local.project}-dns"
-  })
+data "aws_route53_zone" "root" {
+  provider     = aws.us-east-1
+  name         = local.root_domain
+  private_zone = false
 }
 
 output "route53_name_servers" {
   description = "Add these nameservers at your domain registrar when ready to go live on AWS DNS."
-  value       = aws_route53_zone.root.name_servers
+  value       = data.aws_route53_zone.root.name_servers
 }
