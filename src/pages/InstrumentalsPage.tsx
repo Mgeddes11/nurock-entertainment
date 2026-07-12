@@ -10,11 +10,11 @@ export function InstrumentalsPage() {
   return (
     <div className="relative overflow-hidden py-8 pb-16 sm:py-10">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 section-photo-bg"
         style={{ backgroundImage: `url(${PAGE_BG})` }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-base-100/62" aria-hidden />
+      <div className="absolute inset-0 bg-base-100/62 max-md:bg-base-100/38" aria-hidden />
       <div className="relative z-10 px-6">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-2 text-base-content">

@@ -7,19 +7,15 @@ export function Hero() {
     <section className="relative overflow-hidden py-8 sm:py-12 md:min-h-[85vh] md:py-16 lg:min-h-screen lg:py-20">
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 section-photo-bg"
           style={{
             backgroundImage: `url(https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1920&q=80)`,
           }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(221,178,74,0.18),transparent_36%)]" aria-hidden />
-        <div className="absolute inset-0 bg-base-100/34 z-[1]" aria-hidden />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(221,178,74,0.18),transparent_36%)] max-md:opacity-75" aria-hidden />
+        <div className="absolute inset-0 bg-base-100/34 max-md:bg-base-100/20 z-[1]" aria-hidden />
         <div
-          className="absolute inset-0 z-[2]"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(7,6,5,0.82) 0%, rgba(7,6,5,0.54) 42%, rgba(7,6,5,0.18) 68%, rgba(7,6,5,0.54) 100%)",
-          }}
+          className="hero-photo-gradient absolute inset-0 z-[2]"
           aria-hidden
         />
         <div className="grain-overlay absolute inset-0 z-[3]" aria-hidden />

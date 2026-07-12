@@ -10,12 +10,12 @@ export function CTASection() {
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 section-photo-bg"
         style={{ backgroundImage: `url(${MIXING_CONSOLE_IMAGE})` }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-base-100/54" aria-hidden />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(221,178,74,0.22),transparent_36%)]" aria-hidden />
+      <div className="absolute inset-0 bg-base-100/54 max-md:bg-base-100/34" aria-hidden />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(221,178,74,0.22),transparent_36%)] max-md:opacity-70" aria-hidden />
 
       <div className="page-section relative z-10">
         <div className="panel-surface mx-auto max-w-4xl rounded-[2rem] px-6 py-12 text-center md:px-12 md:py-16">

@@ -308,3 +308,53 @@ img {
     0 0 0 4px rgb(221 178 74 / 0.12),
     inset 0 1px 0 rgb(255 255 255 / 0.05);
 }
+
+.section-photo-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-photo-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(7, 6, 5, 0.82) 0%,
+    rgba(7, 6, 5, 0.54) 42%,
+    rgba(7, 6, 5, 0.18) 68%,
+    rgba(7, 6, 5, 0.54) 100%
+  );
+}
+
+@media (max-width: 767px) {
+  .section-photo-bg {
+    background-size: cover;
+    background-position: center 22%;
+  }
+
+  .hero-photo-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(7, 6, 5, 0.55) 0%,
+      rgba(7, 6, 5, 0.32) 42%,
+      rgba(7, 6, 5, 0.2) 100%
+    );
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at top, rgb(184 138 24 / 0.12), transparent 30%),
+      radial-gradient(circle at 20% 20%, rgb(122 41 28 / 0.1), transparent 20%),
+      linear-gradient(180deg, rgb(8 7 6 / 0.48), rgb(8 7 6 / 0.62)),
+      url("https://images.unsplash.com/U2eUlPEKIgU?w=1920&q=80");
+    background-size: auto, auto, auto, cover;
+    background-position: center, center, center, center 18%;
+  }
+
+  body::before {
+    opacity: 0.45;
+  }
+
+  .page-shell::before {
+    opacity: 0.45;
+  }
+}

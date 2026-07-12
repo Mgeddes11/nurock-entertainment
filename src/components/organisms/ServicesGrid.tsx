@@ -10,12 +10,12 @@ export function ServicesGrid() {
   return (
     <section className="relative overflow-hidden py-24 md:py-32">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 section-photo-bg"
         style={{ backgroundImage: `url(${GRAFFITI_BG})` }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-base-100/62" aria-hidden />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(221,178,74,0.2),transparent_28%)]" aria-hidden />
+      <div className="absolute inset-0 bg-base-100/62 max-md:bg-base-100/38" aria-hidden />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(221,178,74,0.2),transparent_28%)] max-md:opacity-70" aria-hidden />
 
       <div className="page-section relative z-10">
         <div className="mb-14 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
