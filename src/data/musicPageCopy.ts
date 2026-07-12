@@ -23,8 +23,10 @@ export const musicPageCopy = {
   pageTitle: "Music",
 
   artistSection: {
-    title: "HOLLY NUROCK x ARTIST'S",
-    intro: "Meet the artists behind the sound.",
+    eyebrow: "Selected Collaborations",
+    title: "Holly NuRock × Featured Artists",
+    intro:
+      "A curated glimpse into the artists, records, and creative worlds Holly NuRock has helped bring to life.",
     items: [
       {
         id: "lara-wilson",

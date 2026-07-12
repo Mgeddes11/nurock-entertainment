@@ -2,12 +2,12 @@ import { ArtistCard } from "../molecules/ArtistCard";
 import { musicPageCopy } from "../../data/musicPageCopy";
 
 export function ArtistSection() {
-  const { title, intro, items } = musicPageCopy.artistSection;
+  const { eyebrow, title, intro, items } = musicPageCopy.artistSection;
 
   return (
     <section className="py-16 md:py-20">
-      <span className="eyebrow-label mb-4">Featured Artists</span>
-      <h2 className="mb-3 text-4xl font-black tracking-tight text-base-content md:text-5xl">
+      <span className="eyebrow-label mb-4">{eyebrow}</span>
+      <h2 className="lux-heading mb-3 text-4xl uppercase text-base-content md:text-5xl">
         {title}
       </h2>
       <div className="gold-rule mb-6" />
