@@ -1,9 +1,13 @@
 /**
- * HubSpot config – values from env (VITE_*). Fill .env when account is ready.
+ * HubSpot config – values from env (VITE_*). Public meeting links fall back when env is unset (e.g. CI without vars).
  */
+const DEFAULT_MEETING_URL = "https://meetings-na2.hubspot.com/matthew-geddes";
+
 export const hubspot = {
-  meetingUrlSessions: import.meta.env.VITE_HUBSPOT_MEETING_URL_SESSIONS ?? "",
-  meetingUrlLessons: import.meta.env.VITE_HUBSPOT_MEETING_URL_LESSONS ?? "",
+  meetingUrlSessions:
+    import.meta.env.VITE_HUBSPOT_MEETING_URL_SESSIONS ?? DEFAULT_MEETING_URL,
+  meetingUrlLessons:
+    import.meta.env.VITE_HUBSPOT_MEETING_URL_LESSONS ?? DEFAULT_MEETING_URL,
   portalId: import.meta.env.VITE_HUBSPOT_PORTAL_ID ?? "",
   formGuid: import.meta.env.VITE_HUBSPOT_FORM_GUID ?? "",
 } as const;

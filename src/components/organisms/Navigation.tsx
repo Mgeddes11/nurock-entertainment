@@ -47,7 +47,7 @@ export function Navigation() {
           </div>
 
           <div className="flex shrink-0 items-center gap-2">
-            <Link to="/studio-sessions" className="hidden md:inline-flex">
+            <Link to="/studio-sessions#book" className="hidden md:inline-flex">
               <ButtonPrimary>Book Session</ButtonPrimary>
             </Link>
             <button
@@ -78,7 +78,7 @@ export function Navigation() {
                 {label}
               </Link>
             ))}
-            <Link to="/studio-sessions" onClick={() => setIsOpen(false)} className="pt-2 md:hidden">
+            <Link to="/studio-sessions#book" onClick={() => setIsOpen(false)} className="pt-2 md:hidden">
               <ButtonPrimary className="w-full justify-center">Book Session</ButtonPrimary>
             </Link>
           </div>

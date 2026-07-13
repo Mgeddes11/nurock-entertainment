@@ -24,7 +24,7 @@ export function CTASection() {
             {cta.headline}
           </h2>
           <Link
-            to="/studio-sessions"
+            to="/studio-sessions#book"
             className="premium-button inline-flex items-center justify-center px-8 py-4 text-[0.74rem] font-extrabold uppercase tracking-[0.28em]"
           >
             {cta.button}

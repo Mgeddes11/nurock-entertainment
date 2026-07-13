@@ -19,7 +19,7 @@ export function Hero() {
       </div>
 
       <div className="page-section relative z-20 w-full">
-        <div className="panel-surface max-w-4xl rounded-[2rem] p-6 sm:p-8 md:p-10 lg:p-12">
+        <div className="panel-surface mx-auto max-w-4xl rounded-[2rem] p-6 sm:p-8 md:p-10 lg:p-12">
           <span className="eyebrow-label mb-6">NuRock Entertainment</span>
           <h1 className="mb-6 md:mb-10">
             <img

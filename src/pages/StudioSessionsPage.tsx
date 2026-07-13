@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { StudioFeatureCard } from "../components/molecules/StudioFeatureCard";
+import { HubSpotMeetingEmbed } from "../components/organisms/HubSpotMeetingEmbed";
 import { hubspot } from "../config/hubspot";
 import { studioSessionsCopy } from "../data/studioSessionsCopy";
 
@@ -8,6 +11,15 @@ const INTRO_BG_IMAGE =
 export function StudioSessionsPage() {
   const { intro, cta, features } = studioSessionsCopy;
   const meetingUrl = hubspot.meetingUrlSessions;
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash !== "#book") return;
+    const timer = window.setTimeout(() => {
+      document.getElementById("book")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+    return () => window.clearTimeout(timer);
+  }, [location.hash]);
 
   return (
     <div className="py-8 pb-16 sm:py-10">
@@ -28,20 +40,26 @@ export function StudioSessionsPage() {
             <div className="gold-rule mt-5 mb-8" />
             <p className="mb-6 max-w-3xl text-xl leading-8 text-base-content/84">{intro.tagline2}</p>
             <p className="mb-10 max-w-2xl text-base leading-8 text-base-content/58">{intro.subline}</p>
-            {meetingUrl && (
-              <a
-                href={meetingUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="premium-button inline-flex items-center gap-2 px-8 py-4 text-[0.78rem] font-extrabold uppercase tracking-[0.26em]"
-              >
-                {cta.label}
-                <span className="material-symbols-outlined text-xl inline-block" aria-hidden>
-                  open_in_new
-                </span>
-              </a>
-            )}
+            <a
+              href="#book"
+              className="premium-button inline-flex items-center gap-2 px-8 py-4 text-[0.78rem] font-extrabold uppercase tracking-[0.26em]"
+            >
+              {cta.label}
+              <span className="material-symbols-outlined text-xl inline-block" aria-hidden>
+                calendar_month
+              </span>
+            </a>
           </div>
+        </div>
+      </section>
+
+      <section id="book" className="page-section mb-16 md:mb-20 scroll-mt-28">
+        <div className="panel-surface mx-auto max-w-5xl overflow-hidden rounded-[2rem] p-5 sm:p-7 md:p-8">
+          <span className="eyebrow-label mb-4">Book a session</span>
+          <h2 className="lux-heading mb-6 text-3xl uppercase text-base-content md:text-4xl">
+            Choose your time
+          </h2>
+          <HubSpotMeetingEmbed meetingUrl={meetingUrl} />
         </div>
       </section>
 

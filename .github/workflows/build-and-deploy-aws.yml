@@ -42,6 +42,8 @@ jobs:
       - name: Build site
         env:
           VITE_SITE_ORIGIN: ${{ vars.VITE_SITE_ORIGIN }}
+          VITE_HUBSPOT_MEETING_URL_SESSIONS: ${{ vars.VITE_HUBSPOT_MEETING_URL_SESSIONS }}
+          VITE_HUBSPOT_MEETING_URL_LESSONS: ${{ vars.VITE_HUBSPOT_MEETING_URL_LESSONS }}
         run: npm run build
 
       - name: Configure AWS credentials
