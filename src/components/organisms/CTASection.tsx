@@ -14,7 +14,7 @@ export function CTASection() {
         style={{ backgroundImage: `url(${MIXING_CONSOLE_IMAGE})` }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-base-100/54 max-md:bg-base-100/34" aria-hidden />
+      <div className="absolute inset-0 bg-base-100/34 md:bg-base-100/54" aria-hidden />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(221,178,74,0.22),transparent_36%)] max-md:opacity-70" aria-hidden />
 
       <div className="page-section relative z-10">

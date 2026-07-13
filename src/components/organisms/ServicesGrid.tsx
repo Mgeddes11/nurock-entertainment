@@ -14,7 +14,7 @@ export function ServicesGrid() {
         style={{ backgroundImage: `url(${GRAFFITI_BG})` }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-base-100/62 max-md:bg-base-100/38" aria-hidden />
+      <div className="absolute inset-0 bg-base-100/38 md:bg-base-100/62" aria-hidden />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(221,178,74,0.2),transparent_28%)] max-md:opacity-70" aria-hidden />
 
       <div className="page-section relative z-10">

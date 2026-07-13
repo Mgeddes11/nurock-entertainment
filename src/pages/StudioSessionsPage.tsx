@@ -18,7 +18,7 @@ export function StudioSessionsPage() {
             style={{ backgroundImage: `url(${INTRO_BG_IMAGE})` }}
             aria-hidden
           />
-          <div className="absolute inset-0 bg-base-100/58 max-md:bg-base-100/36" aria-hidden />
+          <div className="absolute inset-0 bg-base-100/36 md:bg-base-100/58" aria-hidden />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(221,178,74,0.22),transparent_32%)] max-md:opacity-70" aria-hidden />
           <div className="relative z-10 p-7 md:p-10 lg:p-12">
             <span className="eyebrow-label mb-4">Studio Sessions</span>

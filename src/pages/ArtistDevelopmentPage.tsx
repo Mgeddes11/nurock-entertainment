@@ -15,7 +15,7 @@ export function ArtistDevelopmentPage() {
         style={{ backgroundImage: `url(${PAGE_BG_IMAGE})` }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-base-100/62 max-md:bg-base-100/38" aria-hidden />
+      <div className="absolute inset-0 bg-base-100/38 md:bg-base-100/62" aria-hidden />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(221,178,74,0.22),transparent_34%)] max-md:opacity-70" aria-hidden />
 
       <div className="page-section relative z-10">

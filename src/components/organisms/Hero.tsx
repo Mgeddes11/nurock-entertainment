@@ -4,7 +4,7 @@ export function Hero() {
   const { hero } = siteCopy;
 
   return (
-    <section className="relative overflow-hidden py-8 sm:py-12 md:min-h-[85vh] md:py-16 lg:min-h-screen lg:py-20">
+    <section className="relative overflow-hidden py-8 sm:py-12 md:flex md:min-h-screen md:items-center md:py-0">
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0 section-photo-bg"
@@ -13,15 +13,12 @@ export function Hero() {
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(221,178,74,0.18),transparent_36%)] max-md:opacity-75" aria-hidden />
-        <div className="absolute inset-0 bg-base-100/34 max-md:bg-base-100/20 z-[1]" aria-hidden />
-        <div
-          className="hero-photo-gradient absolute inset-0 z-[2]"
-          aria-hidden
-        />
+        <div className="absolute inset-0 bg-base-100/20 md:bg-base-100/34 z-[1]" aria-hidden />
+        <div className="hero-photo-gradient absolute inset-0 z-[2]" aria-hidden />
         <div className="grain-overlay absolute inset-0 z-[3]" aria-hidden />
       </div>
 
-      <div className="page-section relative z-20">
+      <div className="page-section relative z-20 w-full">
         <div className="panel-surface max-w-4xl rounded-[2rem] p-6 sm:p-8 md:p-10 lg:p-12">
           <span className="eyebrow-label mb-6">NuRock Entertainment</span>
           <h1 className="mb-6 md:mb-10">

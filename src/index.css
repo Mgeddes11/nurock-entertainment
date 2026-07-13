@@ -358,3 +358,17 @@ img {
     opacity: 0.45;
   }
 }
+
+@media (min-width: 768px) {
+  body {
+    background-attachment: fixed;
+  }
+
+  .page-shell::before {
+    opacity: 1;
+  }
+
+  body::before {
+    opacity: 1;
+  }
+}
