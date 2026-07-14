@@ -4,9 +4,10 @@ type Props = {
 };
 
 function toEmbedUrl(url: string) {
-  if (!url) return "";
-  if (url.includes("embed=true")) return url;
-  return `${url}${url.includes("?") ? "&" : "?"}embed=true`;
+  const trimmed = url.trim();
+  if (!trimmed) return "";
+  if (trimmed.includes("embed=true")) return trimmed;
+  return `${trimmed}${trimmed.includes("?") ? "&" : "?"}embed=true`;
 }
 
 export function HubSpotMeetingEmbed({ meetingUrl, className = "" }: Props) {
