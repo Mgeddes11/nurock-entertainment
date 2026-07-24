@@ -19,9 +19,9 @@ export const siteCopy = {
       },
       {
         icon: "album",
-        title: "Production",
+        title: "Production and Recording",
         description:
-          "Whether you're starting with a simple idea or a full sketch, we help you turn it into something that sounds like you—from bare bones to full-blown arrangements.",
+          "Whether you're starting with a simple idea or a full sketch, we help you turn it into something that sounds like you—from bare bones to full-blown arrangements, tracked in a room that feels right.",
         href: "/studio-sessions",
       },
       {
