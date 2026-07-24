@@ -74,4 +74,31 @@ export const musicPageCopy = {
       },
     ] as ArtistEntry[],
   },
+
+  buyoutsSection: {
+    eyebrow: "Catalog & Rights",
+    title: "Exclusive Beat Buyouts & Music Licensing",
+    intro:
+      "Own production that fits your project — exclusive beats for artists and labels, plus custom licensing for film, TV, commercials, and digital campaigns.",
+    cards: [
+      {
+        id: "beat-buyouts",
+        title: "Exclusive Beat Buyouts",
+        rate: "Starting @ $2,000 per beat",
+        detail: "Plus back-end arrangements",
+        description:
+          "Full exclusive rights to NuRock instrumentals built for your record. Pricing starts at $2,000 per beat, with additional back-end arrangements based on the project.",
+      },
+      {
+        id: "licensing",
+        title: "Music Licensing",
+        rate: "Per deal",
+        detail: "Custom terms by project",
+        description:
+          "License original NuRock music for film, television, commercials, games, and digital campaigns. Every license is priced per deal to match usage, territory, and term.",
+      },
+    ],
+    ctaLabel: "Inquire about buyouts or licensing",
+    ctaHref: "/contacts",
+  },
 };

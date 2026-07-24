@@ -29,6 +29,7 @@ export const siteCopy = {
         title: "Beat Buyouts & Music Licensing",
         description:
           "Own your sound with exclusive beat buyouts, or license original NuRock music for film, TV, commercials, and digital campaigns.",
+        href: "/instrumentals#buyouts",
       },
     ],
   },
