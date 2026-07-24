@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { StudioFeatureCard } from "../components/molecules/StudioFeatureCard";
+import { BookingRequestForm } from "../components/organisms/BookingRequestForm";
 import { HubSpotMeetingEmbed } from "../components/organisms/HubSpotMeetingEmbed";
 import { hubspot } from "../config/hubspot";
 import { studioSessionsCopy } from "../data/studioSessionsCopy";
@@ -60,6 +61,20 @@ export function StudioSessionsPage() {
             Choose your time
           </h2>
           <HubSpotMeetingEmbed meetingUrl={meetingUrl} />
+        </div>
+      </section>
+
+      <section id="request" className="page-section mb-16 md:mb-20 scroll-mt-28">
+        <div className="panel-surface mx-auto max-w-3xl rounded-[2rem] p-5 sm:p-7 md:p-8">
+          <span className="eyebrow-label mb-4">Prefer email?</span>
+          <h2 className="lux-heading mb-3 text-3xl uppercase text-base-content md:text-4xl">
+            Request a booking
+          </h2>
+          <p className="mb-8 text-base leading-7 text-base-content/68">
+            If the calendar doesn&apos;t load, send a booking request. It goes straight to{" "}
+            <span className="text-primary">Hollynurock@nurockentertainment.com</span>.
+          </p>
+          <BookingRequestForm />
         </div>
       </section>
 

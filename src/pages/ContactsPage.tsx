@@ -10,7 +10,13 @@ export function ContactsPage() {
             <span className="eyebrow-label mb-4">Get In Touch</span>
             <h1 className="lux-heading text-5xl uppercase text-base-content md:text-6xl">Contact</h1>
             <div className="gold-rule mt-5 mb-8" />
-            <p className="text-base leading-8 text-base-content/68">Get in touch with NuRock Entertainment</p>
+            <p className="text-base leading-8 text-base-content/68">
+              Messages are sent to{" "}
+              <a className="text-primary underline" href="mailto:Hollynurock@nurockentertainment.com">
+                Hollynurock@nurockentertainment.com
+              </a>
+              .
+            </p>
           </div>
           <ContactForm action={contactFormEndpoint} />
         </div>

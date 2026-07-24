@@ -55,8 +55,13 @@ html {
   width: 100%;
 }
 
-.site-mobile-menu {
-  top: calc(env(safe-area-inset-top, 0px) + 3.75rem);
+.mobile-nav-scroll {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.mobile-nav-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 body {

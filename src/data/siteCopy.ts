@@ -2,7 +2,7 @@ export const siteCopy = {
   hero: {
     headline: "NuRock Entertainment",
     tagline:
-      "NuRock Entertainment is a music production house specializing in artist development, professional music production, and the NuRock Academy, a hands-on learning space where creators learn how to produce real music from the ground up without relying on AI, focusing on true skill, sound, and artistic identity.",
+      "NuRock Entertainment is a music production house and teaching studio led by Holly NuRock. Through the NuRock Academy, artists learn real music production hands-on — arrangement, recording, mixing, and creative identity — building true skill from the ground up without relying on AI.",
     ctaPrimary: "Book a Session",
     ctaSecondary: "View Vault",
   },
@@ -10,6 +10,12 @@ export const siteCopy = {
     title: "The Services",
     subtitle: "Repetition breeds perfection.",
     items: [
+      {
+        icon: "school",
+        title: "Teaching",
+        description:
+          "One-on-one music production lessons inside a real studio. Holly teaches beat-making, arrangement, vocal production, mixing fundamentals, and the creative process — so you leave with skills you can use on every record.",
+      },
       {
         icon: "album",
         title: "Production",
@@ -22,23 +28,17 @@ export const siteCopy = {
         description:
           "Great mics, a room that feels right, and no pressure. We set things up so you can focus on the take and forget the rest.",
       },
-      {
-        icon: "tune",
-        title: "Mixing",
-        description:
-          "We care about the details without losing the vibe. Your tracks get the clarity and weight they need so they translate everywhere.",
-      },
     ],
   },
   about: {
-    title: "The Architects",
-    titleAccent: "Architects",
+    title: "The Teacher",
+    titleAccent: "Teacher",
     body1:
-      "We started in a concrete basement with a single mic and a vision to disrupt the industry's plastic standards. Today, NuRock stands as a sanctuary for those who value authenticity over algorithms.",
+      "Teaching is at the core of NuRock. Holly NuRock built the Academy so artists and producers can learn the craft the way he learned it — in the room, on real sessions, with hands-on guidance through every step of making a record.",
     body2:
-      "Our team of producers and engineers are artists first. We don't just follow trends; we set the fire that burns them down.",
-    stat1: { value: "500+", label: "Sessions Booked" },
-    stat2: { value: "12", label: "Platinum Credits" },
+      "From first beat to final mix, students learn arrangement, sound design, vocal production, mixing, and creative decision-making. No shortcuts. No AI crutches. Just real skill, real sound, and a clear path to release-ready music.",
+    stat1: { value: "1:1", label: "Mentorship" },
+    stat2: { value: "$150", label: "Per Hour Starting" },
     established: "Est. 2024",
   },
   cta: {
@@ -66,6 +66,11 @@ export const siteCopy = {
       "As a Muse Producer, Holly’s gift is not just building records. It is bringing out the artist beneath the surface. He helps you discover your sonic palette, refine your creative identity, and turn raw emotion into release-ready music with purpose, depth, and direction.",
       "NuRock Academy is where artists stop copying what they hear and start creating from who they are.",
     ],
+    pricing: {
+      label: "Music Production Lessons",
+      rate: "Starting @ $150/hr",
+      minimum: "2 hour minimum",
+    },
     cta: "Book a consultation",
   },
 };

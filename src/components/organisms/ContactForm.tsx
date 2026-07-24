@@ -6,7 +6,10 @@ const INQUIRY_OPTIONS = [
   { value: "artist-recording", label: "Artist Recording" },
   { value: "music-academy", label: "Music Academy" },
   { value: "beat-buyouts-licensing", label: "Beat buyouts and licensing" },
+  { value: "booking", label: "Book a Session / Lesson" },
 ] as const;
+
+const DIRECT_EMAIL = "Hollynurock@nurockentertainment.com";
 
 type Props = {
   action?: string;
@@ -33,12 +36,15 @@ export function ContactForm({ action = "", className = "" }: Props) {
     if (isFormSubmit) {
       const inquiry = formData.get("inquiry") as string;
       const label = INQUIRY_OPTIONS.find((o) => o.value === inquiry)?.label ?? inquiry;
+      const email = String(formData.get("email") || "");
       const payload = {
         _subject: `NuRock Contact: ${label}`,
         _template: "table",
+        _replyto: email,
+        _captcha: "false",
         inquiry: label,
         name: formData.get("name"),
-        email: formData.get("email"),
+        email,
         phone: formData.get("phone") || "",
         message: formData.get("message"),
       };
@@ -136,16 +142,27 @@ export function ContactForm({ action = "", className = "" }: Props) {
         />
       </div>
 
+      {/* Honeypot */}
+      <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden />
+
       {status === "success" && (
         <div className="rounded-2xl border border-emerald-400/20 bg-emerald-500/10 p-4 text-sm text-emerald-100">
-          Thanks for reaching out. We&apos;ll get back to you soon.
+          Thanks for reaching out. Your message was sent to {DIRECT_EMAIL}. We&apos;ll get back to you soon.
         </div>
       )}
       {status === "error" && (
         <div className="rounded-2xl border border-red-400/20 bg-red-500/10 p-4 text-sm text-red-100">
-          {action
-            ? "Something went wrong. Please try again or email us directly."
-            : "Add VITE_CONTACT_FORM_ENDPOINT in .env (e.g. your Formspree URL) to enable the form."}
+          {action ? (
+            <>
+              Something went wrong. Please email us directly at{" "}
+              <a className="underline" href={`mailto:${DIRECT_EMAIL}`}>
+                {DIRECT_EMAIL}
+              </a>
+              .
+            </>
+          ) : (
+            "Contact form is not configured yet."
+          )}
         </div>
       )}
 
@@ -156,6 +173,13 @@ export function ContactForm({ action = "", className = "" }: Props) {
       >
         {status === "sending" ? "Sending..." : "Send"}
       </button>
+
+      <p className="text-center text-xs text-base-content/50">
+        Or email{" "}
+        <a className="text-primary underline" href={`mailto:${DIRECT_EMAIL}`}>
+          {DIRECT_EMAIL}
+        </a>
+      </p>
     </form>
   );
 }

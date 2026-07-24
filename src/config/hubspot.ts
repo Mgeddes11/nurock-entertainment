@@ -1,8 +1,12 @@
 /**
- * HubSpot config – values from env (VITE_*).
+ * HubSpot + contact form config.
  * Empty CI vars must fall back with || (?? only catches null/undefined).
+ *
+ * HubSpot meeting notifications must also be set in HubSpot to
+ * Hollynurock@nurockentertainment.com (Meetings → Edit → Notifications).
  */
 const DEFAULT_MEETING_URL = "https://meetings-na2.hubspot.com/matthew-geddes";
+const NUROCK_EMAIL = "Hollynurock@nurockentertainment.com";
 
 export const hubspot = {
   meetingUrlSessions:
@@ -13,7 +17,9 @@ export const hubspot = {
   formGuid: import.meta.env.VITE_HUBSPOT_FORM_GUID || "",
 } as const;
 
-/** Contact form submissions go to Hollynurock@nurockentertainment.com via FormSubmit. Override with VITE_CONTACT_FORM_ENDPOINT if using Formspree/etc. */
+/** Contact + booking requests go to NuRock email via FormSubmit. */
 export const contactFormEndpoint =
   import.meta.env.VITE_CONTACT_FORM_ENDPOINT ||
-  "https://formsubmit.co/ajax/Hollynurock@nurockentertainment.com";
+  `https://formsubmit.co/ajax/${NUROCK_EMAIL}`;
+
+export const nurockEmail = NUROCK_EMAIL;

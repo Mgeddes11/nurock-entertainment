@@ -31,6 +31,19 @@ export function ArtistDevelopmentPage() {
               <p key={i}>{paragraph}</p>
             ))}
           </div>
+
+          <div className="mb-10 rounded-[1.5rem] border border-primary/25 bg-primary/8 px-6 py-5 md:px-8 md:py-6">
+            <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-primary">
+              {artistDevelopment.pricing.label}
+            </p>
+            <p className="text-2xl font-black uppercase tracking-tight text-base-content md:text-3xl">
+              {artistDevelopment.pricing.rate}
+            </p>
+            <p className="mt-2 text-sm uppercase tracking-[0.2em] text-base-content/68">
+              {artistDevelopment.pricing.minimum}
+            </p>
+          </div>
+
           <Link to="/studio-sessions">
             <ButtonPrimary className="px-8 py-4 text-[0.78rem]">{artistDevelopment.cta}</ButtonPrimary>
           </Link>
