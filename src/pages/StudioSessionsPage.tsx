@@ -77,12 +77,12 @@ export function StudioSessionsPage() {
 
       <section id="request" className="page-section mb-16 md:mb-20 scroll-mt-28">
         <div className="panel-surface mx-auto max-w-3xl rounded-[2rem] p-5 sm:p-7 md:p-8">
-          <span className="eyebrow-label mb-4">Prefer email?</span>
+          <span className="eyebrow-label mb-4">Always works</span>
           <h2 className="lux-heading mb-3 text-3xl uppercase text-base-content md:text-4xl">
-            Request a booking
+            Request a booking by email
           </h2>
           <p className="mb-8 text-base leading-7 text-base-content/68">
-            If the calendar doesn&apos;t load, send a booking request. It goes straight to{" "}
+            Prefer not to use the calendar? Send a booking request and it goes straight to{" "}
             <span className="text-primary">Hollynurock@nurockentertainment.com</span>.
           </p>
           <BookingRequestForm />
