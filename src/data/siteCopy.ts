@@ -15,6 +15,7 @@ export const siteCopy = {
         title: "Teaching",
         description:
           "One-on-one music production lessons inside a real studio. Holly teaches beat-making, arrangement, vocal production, mixing fundamentals, and the creative process — so you leave with skills you can use on every record.",
+        href: "/artist-development",
       },
       {
         icon: "album",

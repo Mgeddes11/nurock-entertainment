@@ -38,6 +38,7 @@ export function ServicesGrid() {
               icon={item.icon}
               title={item.title}
               description={item.description}
+              href={"href" in item ? item.href : undefined}
             />
           ))}
         </div>
