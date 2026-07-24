@@ -12,6 +12,11 @@ export const studioSessionsCopy = {
     subline:
       "Reserve your slot below or use the button to open the scheduler in a new tab.",
   },
+  pricing: {
+    label: "Studio Sessions",
+    rate: "Starting @ $175 per hour",
+    detail: "Based on project",
+  },
   cta: {
     label: "Open booking scheduler",
     openInNewTab: true,

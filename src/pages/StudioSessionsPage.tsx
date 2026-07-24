@@ -10,7 +10,7 @@ const INTRO_BG_IMAGE =
   "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1920&q=80";
 
 export function StudioSessionsPage() {
-  const { intro, cta, features } = studioSessionsCopy;
+  const { intro, pricing, cta, features } = studioSessionsCopy;
   const meetingUrl = hubspot.meetingUrlSessions;
   const location = useLocation();
 
@@ -40,7 +40,18 @@ export function StudioSessionsPage() {
             </h1>
             <div className="gold-rule mt-5 mb-8" />
             <p className="mb-6 max-w-3xl text-xl leading-8 text-base-content/84">{intro.tagline2}</p>
-            <p className="mb-10 max-w-2xl text-base leading-8 text-base-content/58">{intro.subline}</p>
+            <p className="mb-8 max-w-2xl text-base leading-8 text-base-content/58">{intro.subline}</p>
+            <div className="mb-10 max-w-md rounded-[1.5rem] border border-primary/25 bg-primary/8 px-6 py-5 md:px-7 md:py-6">
+              <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-primary">
+                {pricing.label}
+              </p>
+              <p className="text-2xl font-black uppercase tracking-tight text-base-content md:text-3xl">
+                {pricing.rate}
+              </p>
+              <p className="mt-2 text-sm uppercase tracking-[0.2em] text-base-content/68">
+                {pricing.detail}
+              </p>
+            </div>
             <a
               href="#book"
               className="premium-button inline-flex items-center gap-2 px-8 py-4 text-[0.78rem] font-extrabold uppercase tracking-[0.26em]"
