@@ -22,6 +22,7 @@ export const siteCopy = {
         title: "Production",
         description:
           "Whether you're starting with a simple idea or a full sketch, we help you turn it into something that sounds like you—from bare bones to full-blown arrangements.",
+        href: "/studio-sessions",
       },
       {
         icon: "mic",
