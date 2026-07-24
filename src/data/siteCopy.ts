@@ -25,10 +25,10 @@ export const siteCopy = {
         href: "/studio-sessions",
       },
       {
-        icon: "mic",
-        title: "Recording",
+        icon: "copyright",
+        title: "Beat Buyouts & Music Licensing",
         description:
-          "Great mics, a room that feels right, and no pressure. We set things up so you can focus on the take and forget the rest.",
+          "Own your sound with exclusive beat buyouts, or license original NuRock music for film, TV, commercials, and digital campaigns.",
       },
     ],
   },
