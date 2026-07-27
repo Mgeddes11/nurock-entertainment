@@ -50,6 +50,10 @@ export const shopConfig = {
   },
   checkoutEnabled: false,
   checkoutComingSoonMessage: "Checkout connects next via Shopify + Tapstitch. Your cart is saved locally.",
+  /** When false, shop is hidden from nav/footer and /shop redirects home (unless preview). */
+  publicEnabled: false,
+  /** Visit /shop?preview=<token> once to unlock shop for this browser session. */
+  previewToken: "pretty-things",
 } as const;
 
 export const designFamilies = [

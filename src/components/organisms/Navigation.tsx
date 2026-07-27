@@ -3,19 +3,29 @@ import { Logo } from "../atoms/Logo";
 import { ButtonPrimary } from "../atoms/ButtonPrimary";
 import { NavLink } from "../molecules/NavLink";
 import { useCart } from "../../commerce/cartContext";
+import { useShopChrome } from "../../hooks/useShopChrome";
 
-const navItems = [
+const baseNavItems = [
   { to: "/", label: "About" },
   { to: "/meet-holly", label: "Meet Holly" },
   { to: "/artist-development", label: "Academy" },
   { to: "/studio-sessions", label: "Studio" },
   { to: "/instrumentals", label: "Music" },
-  { to: "/shop", label: "Shop" },
   { to: "/contacts", label: "Contact" },
 ];
 
+const shopNavItem = { to: "/shop", label: "Shop" };
+
 export function Navigation() {
   const { count, openCart } = useCart();
+  const showShop = useShopChrome();
+  const navItems = showShop
+    ? [
+        ...baseNavItems.slice(0, 5),
+        shopNavItem,
+        ...baseNavItems.slice(5),
+      ]
+    : baseNavItems;
 
   return (
     <header
@@ -47,19 +57,21 @@ export function Navigation() {
           </div>
 
           <div className="flex shrink-0 items-center gap-2">
-            <button
-              type="button"
-              onClick={openCart}
-              className="relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/8 text-white"
-              aria-label={`Open cart${count ? `, ${count} items` : ""}`}
-            >
-              <span className="material-symbols-outlined text-[1.25rem]">shopping_bag</span>
-              {count > 0 ? (
-                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[0.6rem] font-bold text-primary-content">
-                  {count}
-                </span>
-              ) : null}
-            </button>
+            {showShop ? (
+              <button
+                type="button"
+                onClick={openCart}
+                className="relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/8 text-white"
+                aria-label={`Open cart${count ? `, ${count} items` : ""}`}
+              >
+                <span className="material-symbols-outlined text-[1.25rem]">shopping_bag</span>
+                {count > 0 ? (
+                  <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[0.6rem] font-bold text-primary-content">
+                    {count}
+                  </span>
+                ) : null}
+              </button>
+            ) : null}
             <Link to="/studio-sessions#book" className="hidden shrink-0 md:inline-flex">
               <ButtonPrimary>Book Session</ButtonPrimary>
             </Link>

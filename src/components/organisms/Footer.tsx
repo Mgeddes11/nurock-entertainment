@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Logo } from "../atoms/Logo";
 import { siteCopy } from "../../data/siteCopy";
 import { shopConfig } from "../../data/shop/shopConfig";
+import { useShopChrome } from "../../hooks/useShopChrome";
 
 const shopLinks = [
   { label: "Shop", to: "/shop" },
@@ -12,7 +13,9 @@ const shopLinks = [
   { label: "Returns", to: "/shop/returns" },
 ];
 
-const legalLinks = [
+const legalLinksPublic = [{ label: "Contact", to: "/contacts" }];
+
+const legalLinksWithShop = [
   { label: "Privacy", to: "/shop/privacy" },
   { label: "Terms", to: "/shop/terms" },
   { label: "Contact", to: "/contacts" },
@@ -21,6 +24,8 @@ const legalLinks = [
 
 export function Footer() {
   const { footer } = siteCopy;
+  const showShop = useShopChrome();
+  const legalLinks = showShop ? legalLinksWithShop : legalLinksPublic;
 
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-[linear-gradient(180deg,rgba(30,24,18,0.92),rgba(18,14,10,0.94))] py-16 md:py-20">
@@ -31,15 +36,21 @@ export function Footer() {
 
       <div className="page-section relative">
         <div className="panel-surface rounded-[2rem] p-8 md:p-10 lg:p-12">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr_0.9fr] lg:items-start">
+          <div
+            className={`grid gap-12 lg:items-start ${
+              showShop ? "lg:grid-cols-[1.1fr_0.9fr_0.9fr]" : "lg:grid-cols-[1.2fr_0.8fr]"
+            }`}
+          >
             <div>
               <Logo to="/" className="mb-6" />
               <p className="max-w-xl text-sm leading-7 text-base-content/66 md:text-[0.95rem]">
                 {footer.tagline}
               </p>
-              <p className="mt-4 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-primary">
-                {shopConfig.brand.tagline}
-              </p>
+              {showShop ? (
+                <p className="mt-4 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-primary">
+                  {shopConfig.brand.tagline}
+                </p>
+              ) : null}
               <div className="mt-8 flex flex-wrap gap-4">
                 <a className="premium-button-ghost inline-flex h-11 w-11 items-center justify-center" href="#" aria-label="Facebook">
                   <span className="material-symbols-outlined text-[1.15rem]">facebook</span>
@@ -59,18 +70,20 @@ export function Footer() {
               </div>
             </div>
 
-            <div>
-              <span className="eyebrow-label mb-5">NRE Apparel</span>
-              <ul className="space-y-3">
-                {shopLinks.map((l) => (
-                  <li key={l.to}>
-                    <Link to={l.to} className="text-sm uppercase tracking-[0.18em] text-base-content/70 hover:text-primary">
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {showShop ? (
+              <div>
+                <span className="eyebrow-label mb-5">NRE Apparel</span>
+                <ul className="space-y-3">
+                  {shopLinks.map((l) => (
+                    <li key={l.to}>
+                      <Link to={l.to} className="text-sm uppercase tracking-[0.18em] text-base-content/70 hover:text-primary">
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
 
             <div className="min-w-0 w-full rounded-[1.5rem] border border-white/8 bg-white/3 p-6 md:p-7">
               <span className="eyebrow-label mb-5">Contact</span>
@@ -94,7 +107,7 @@ export function Footer() {
 
           <div className="mt-10 flex flex-col gap-3 border-t border-white/8 pt-6 text-xs uppercase tracking-[0.18em] text-base-content/45 md:flex-row md:items-center md:justify-between">
             <p>{footer.legal}</p>
-            <p>NRE Apparel · NuRock Entertainment</p>
+            {showShop ? <p>NRE Apparel · NuRock Entertainment</p> : <p>NuRock Entertainment</p>}
           </div>
         </div>
       </div>

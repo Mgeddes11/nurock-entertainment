@@ -9,6 +9,7 @@ import { InstrumentalsPage } from "./pages/InstrumentalsPage";
 import { LiveEventsPage } from "./pages/LiveEventsPage";
 import { ArtistDevelopmentPage } from "./pages/ArtistDevelopmentPage";
 import { MeetHollyPage } from "./pages/MeetHollyPage";
+import { ShopGate } from "./components/shop/ShopGate";
 import { ShopHomePage } from "./pages/shop/ShopHomePage";
 import { CollectionsIndexPage } from "./pages/shop/CollectionsIndexPage";
 import { CollectionPage } from "./pages/shop/CollectionPage";
@@ -34,19 +35,19 @@ function App() {
             <Route path="live-events" element={<LiveEventsPage />} />
             <Route path="artist-development" element={<ArtistDevelopmentPage />} />
 
-            <Route path="shop" element={<ShopHomePage />} />
-            <Route path="shop/collections" element={<CollectionsIndexPage />} />
-            <Route path="shop/collections/:slug" element={<CollectionPage />} />
-            <Route path="shop/product/:slug" element={<ProductPage />} />
-            <Route path="shop/cart" element={<CartPage />} />
-            <Route path="shop/lookbook" element={<LookbookPage />} />
-            <Route path="shop/about" element={<AboutApparelPage />} />
-            <Route path="shop/shipping" element={<PolicyPage />} />
-            <Route path="shop/returns" element={<PolicyPage />} />
-            <Route path="shop/privacy" element={<PolicyPage />} />
-            <Route path="shop/terms" element={<PolicyPage />} />
-            <Route path="shop/faq" element={<PolicyPage />} />
-            <Route path="unlock" element={<UnlockPage />} />
+            <Route path="shop" element={<ShopGate><ShopHomePage /></ShopGate>} />
+            <Route path="shop/collections" element={<ShopGate><CollectionsIndexPage /></ShopGate>} />
+            <Route path="shop/collections/:slug" element={<ShopGate><CollectionPage /></ShopGate>} />
+            <Route path="shop/product/:slug" element={<ShopGate><ProductPage /></ShopGate>} />
+            <Route path="shop/cart" element={<ShopGate><CartPage /></ShopGate>} />
+            <Route path="shop/lookbook" element={<ShopGate><LookbookPage /></ShopGate>} />
+            <Route path="shop/about" element={<ShopGate><AboutApparelPage /></ShopGate>} />
+            <Route path="shop/shipping" element={<ShopGate><PolicyPage /></ShopGate>} />
+            <Route path="shop/returns" element={<ShopGate><PolicyPage /></ShopGate>} />
+            <Route path="shop/privacy" element={<ShopGate><PolicyPage /></ShopGate>} />
+            <Route path="shop/terms" element={<ShopGate><PolicyPage /></ShopGate>} />
+            <Route path="shop/faq" element={<ShopGate><PolicyPage /></ShopGate>} />
+            <Route path="unlock" element={<ShopGate><UnlockPage /></ShopGate>} />
           </Route>
         </Routes>
       </CartProvider>
