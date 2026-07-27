@@ -377,3 +377,34 @@ img {
     opacity: 1;
   }
 }
+
+
+/* NRE Apparel — darker fashion layer on top of NuRock theme */
+.nre-shop {
+  --nre-black: #080706;
+  --nre-soft-black: #12100e;
+  --nre-charcoal: #2a2a2a;
+  --nre-bone: #e8e0d4;
+  --nre-blood: #8b1e1e;
+  color: #f7f0e6;
+  background: var(--nre-black);
+}
+
+.nre-shop .lux-heading {
+  letter-spacing: -0.03em;
+}
+
+.nre-product-card:focus-visible,
+.nre-shop a:focus-visible,
+.nre-shop button:focus-visible {
+  outline: 2px solid rgb(184 138 24 / 0.7);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nre-product-card img,
+  .nre-product-placeholder,
+  .nre-product-card * {
+    transition: none !important;
+  }
+}

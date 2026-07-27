@@ -1,5 +1,23 @@
+import { Link } from "react-router-dom";
 import { Logo } from "../atoms/Logo";
 import { siteCopy } from "../../data/siteCopy";
+import { shopConfig } from "../../data/shop/shopConfig";
+
+const shopLinks = [
+  { label: "Shop", to: "/shop" },
+  { label: "NRE Vol. 001", to: "/shop/collections/nre-vol-001" },
+  { label: "Lookbook", to: "/shop/lookbook" },
+  { label: "Size Guide", to: "/shop/faq" },
+  { label: "Shipping", to: "/shop/shipping" },
+  { label: "Returns", to: "/shop/returns" },
+];
+
+const legalLinks = [
+  { label: "Privacy", to: "/shop/privacy" },
+  { label: "Terms", to: "/shop/terms" },
+  { label: "Contact", to: "/contacts" },
+  { label: "FAQ", to: "/shop/faq" },
+];
 
 export function Footer() {
   const { footer } = siteCopy;
@@ -13,28 +31,45 @@ export function Footer() {
 
       <div className="page-section relative">
         <div className="panel-surface rounded-[2rem] p-8 md:p-10 lg:p-12">
-          <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr_0.9fr] lg:items-start">
             <div>
               <Logo to="/" className="mb-6" />
               <p className="max-w-xl text-sm leading-7 text-base-content/66 md:text-[0.95rem]">
                 {footer.tagline}
               </p>
+              <p className="mt-4 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-primary">
+                {shopConfig.brand.tagline}
+              </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <a className="premium-button-ghost inline-flex h-11 w-11 items-center justify-center" href="#">
+                <a className="premium-button-ghost inline-flex h-11 w-11 items-center justify-center" href="#" aria-label="Facebook">
                   <span className="material-symbols-outlined text-[1.15rem]">facebook</span>
                 </a>
                 <a
                   className="premium-button-ghost inline-flex h-11 w-11 items-center justify-center"
-                  href="https://www.instagram.com/holly_nurock/"
+                  href={shopConfig.social.instagram}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Instagram"
                 >
                   <span className="material-symbols-outlined text-[1.15rem]">photo_camera</span>
                 </a>
-                <a className="premium-button-ghost inline-flex h-11 w-11 items-center justify-center" href="#">
+                <a className="premium-button-ghost inline-flex h-11 w-11 items-center justify-center" href="#" aria-label="Music">
                   <span className="material-symbols-outlined text-[1.15rem]">music_note</span>
                 </a>
               </div>
+            </div>
+
+            <div>
+              <span className="eyebrow-label mb-5">NRE Apparel</span>
+              <ul className="space-y-3">
+                {shopLinks.map((l) => (
+                  <li key={l.to}>
+                    <Link to={l.to} className="text-sm uppercase tracking-[0.18em] text-base-content/70 hover:text-primary">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="min-w-0 w-full rounded-[1.5rem] border border-white/8 bg-white/3 p-6 md:p-7">
@@ -45,18 +80,21 @@ export function Footer() {
               >
                 {footer.connect.email}
               </a>
+              <ul className="mt-6 space-y-2">
+                {legalLinks.map((l) => (
+                  <li key={l.to}>
+                    <Link to={l.to} className="text-xs uppercase tracking-[0.18em] text-base-content/55 hover:text-primary">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col gap-5 border-t border-white/8 pt-7 text-[0.7rem] uppercase tracking-[0.26em] text-base-content/40 md:flex-row md:items-center md:justify-between">
-            <p>© {new Date().getFullYear()} NuRock Entertainment. All rights reserved.</p>
-            <div className="flex flex-wrap gap-6">
-              {footer.links.map((link) => (
-                <a key={link.label} href={link.href} className="hover:text-primary">
-                  {link.label}
-                </a>
-              ))}
-            </div>
+          <div className="mt-10 flex flex-col gap-3 border-t border-white/8 pt-6 text-xs uppercase tracking-[0.18em] text-base-content/45 md:flex-row md:items-center md:justify-between">
+            <p>{footer.legal}</p>
+            <p>NRE Apparel · NuRock Entertainment</p>
           </div>
         </div>
       </div>

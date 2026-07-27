@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Logo } from "../atoms/Logo";
 import { ButtonPrimary } from "../atoms/ButtonPrimary";
 import { NavLink } from "../molecules/NavLink";
+import { useCart } from "../../commerce/cartContext";
 
 const navItems = [
   { to: "/", label: "About" },
@@ -9,10 +10,13 @@ const navItems = [
   { to: "/artist-development", label: "Academy" },
   { to: "/studio-sessions", label: "Studio" },
   { to: "/instrumentals", label: "Music" },
+  { to: "/shop", label: "Shop" },
   { to: "/contacts", label: "Contact" },
 ];
 
 export function Navigation() {
+  const { count, openCart } = useCart();
+
   return (
     <header
       className="site-header sticky top-0 z-50 border-b border-white/10 bg-[#14100c] shadow-[0_4px_24px_rgba(0,0,0,0.45)]"
@@ -42,12 +46,26 @@ export function Navigation() {
             ))}
           </div>
 
-          <Link to="/studio-sessions#book" className="hidden shrink-0 md:inline-flex">
-            <ButtonPrimary>Book Session</ButtonPrimary>
-          </Link>
+          <div className="flex shrink-0 items-center gap-2">
+            <button
+              type="button"
+              onClick={openCart}
+              className="relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/8 text-white"
+              aria-label={`Open cart${count ? `, ${count} items` : ""}`}
+            >
+              <span className="material-symbols-outlined text-[1.25rem]">shopping_bag</span>
+              {count > 0 ? (
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[0.6rem] font-bold text-primary-content">
+                  {count}
+                </span>
+              ) : null}
+            </button>
+            <Link to="/studio-sessions#book" className="hidden shrink-0 md:inline-flex">
+              <ButtonPrimary>Book Session</ButtonPrimary>
+            </Link>
+          </div>
         </div>
 
-        {/* iPhone / tablet: always-visible top nav bar */}
         <div className="mobile-nav-bar -mx-4 border-t border-white/8 sm:-mx-6 lg:hidden">
           <div className="mobile-nav-scroll flex items-stretch gap-1 overflow-x-auto px-3 py-2 sm:px-5">
             {navItems.map(({ to, label }) => (
