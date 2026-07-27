@@ -42,7 +42,7 @@ export function LookbookPage() {
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-[0.7rem] uppercase tracking-[0.34em] text-primary">Lookbook</p>
           <h1 className="mt-4 text-5xl font-black uppercase tracking-tight md:text-7xl">Pretty Things Bite</h1>
-          <p className="mt-5 text-white/55">NRE Vol. 001 · Edition 001 · 280GSM · Vintage Washed Black</p>
+          <p className="mt-5 text-white/55">NRE Vol. 001 · Edition 001 · 260GSM · Vintage Washed Black</p>
         </div>
       </section>
 

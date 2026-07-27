@@ -13,7 +13,7 @@ export const shopConfig = {
   hero: {
     headline: "PRETTY THINGS BITE",
     subheadline: "NRE Vol. 001 — Uniforms for the creatively restless.",
-    supporting: "280GSM heavyweight cotton. Vintage washed black. Born after midnight.",
+    supporting: "260GSM heavyweight cotton. Vintage washed black. Born after midnight.",
     primaryCta: { label: "Shop the collection", to: "/shop/collections/nre-vol-001" },
     secondaryCta: { label: "View lookbook", to: "/shop/lookbook" },
   },

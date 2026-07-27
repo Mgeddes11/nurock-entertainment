@@ -6,7 +6,7 @@ export const collections = [
     name: "NRE Vol. 001",
     tagline: "Uniforms for the creatively restless.",
     description:
-      "Pretty Things Bite leads Vol. 001 — 280GSM oversized tees in vintage washed black, plus Studio, No Signal, and Midnight families.",
+      "Pretty Things Bite leads Vol. 001 — 260GSM oversized tees in vintage washed black, plus Studio, No Signal, and Midnight families.",
   },
   ...designFamilies.map((f) => ({
     slug: f.slug,
