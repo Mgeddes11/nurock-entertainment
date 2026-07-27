@@ -8,6 +8,13 @@ type Props = {
 
 export function ProductImagePlaceholder({ image, label, className = "" }: Props) {
   const text = label || image?.alt || "Campaign image placeholder";
+  if (image?.src) {
+    return (
+      <div className={"relative aspect-[4/5] w-full overflow-hidden bg-[#0a0a0a] " + className}>
+        <img src={image.src} alt={image.alt || text} className="h-full w-full object-cover object-center" loading="lazy" />
+      </div>
+    );
+  }
   return (
     <div
       className={

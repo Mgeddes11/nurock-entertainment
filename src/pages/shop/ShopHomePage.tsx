@@ -21,7 +21,11 @@ export function ShopHomePage() {
 
       <section className="relative min-h-[78vh] overflow-hidden border-b border-white/10">
         <div className="absolute inset-0">
-          <ProductImagePlaceholder label="Campaign hero image — replace with NRE Vol. 001 film still" className="h-full min-h-[78vh] rounded-none aspect-auto" />
+          <img
+            src="/assets/shop/pretty-things-bite/design-board.jpg"
+            alt="NRE Pretty Things Bite design board"
+            className="h-full min-h-[78vh] w-full object-cover object-center"
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/25" aria-hidden />
         <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-6 pb-16 pt-28 md:pb-24">

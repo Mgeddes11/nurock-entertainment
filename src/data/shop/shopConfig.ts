@@ -7,13 +7,13 @@ export const shopConfig = {
     supporting:
       "Designed by artists, producers, and creators—not by a traditional fashion company.",
   },
-  announcement: "NRE VOL. 001 — LIMITED FIRST RELEASE",
+  announcement: "NRE VOL. 001 — PRETTY THINGS BITE · LIMITED FIRST RELEASE",
   freeShippingThreshold: 150,
   currency: "USD" as const,
   hero: {
-    headline: "NRE VOL. 001",
-    subheadline: "Uniforms for the creatively restless.",
-    supporting: "Born inside the studio. Built for everywhere after midnight.",
+    headline: "PRETTY THINGS BITE",
+    subheadline: "NRE Vol. 001 — Uniforms for the creatively restless.",
+    supporting: "280GSM heavyweight cotton. Vintage washed black. Born after midnight.",
     primaryCta: { label: "Shop the collection", to: "/shop/collections/nre-vol-001" },
     secondaryCta: { label: "View lookbook", to: "/shop/lookbook" },
   },

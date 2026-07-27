@@ -6,7 +6,7 @@ export const collections = [
     name: "NRE Vol. 001",
     tagline: "Uniforms for the creatively restless.",
     description:
-      "The first curated drop from NRE Apparel — limited pieces spanning Vampire, Studio, No Signal, and Midnight.",
+      "Pretty Things Bite leads Vol. 001 — 280GSM oversized tees in vintage washed black, plus Studio, No Signal, and Midnight families.",
   },
   ...designFamilies.map((f) => ({
     slug: f.slug,
