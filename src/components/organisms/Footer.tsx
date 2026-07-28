@@ -25,44 +25,44 @@ export function Footer() {
   const legalLinks = showShop ? legalLinksWithShop : [];
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[linear-gradient(180deg,rgba(30,24,18,0.92),rgba(18,14,10,0.94))] py-8 md:py-10">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[linear-gradient(180deg,rgba(30,24,18,0.92),rgba(18,14,10,0.94))] py-6 md:py-8">
       <div className="absolute inset-0 opacity-70" aria-hidden>
         <div className="grain-overlay absolute inset-0" />
         <div className="absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
       </div>
 
       <div className="page-section relative">
-        <div className="panel-surface rounded-[1.5rem] p-5 sm:p-6 md:p-7">
+        <div className="panel-surface rounded-[1.5rem] p-4 sm:p-5 md:p-6">
           <div
-            className={`grid gap-6 md:gap-8 lg:items-start ${
+            className={`grid gap-4 md:gap-6 lg:items-start ${
               showShop ? "lg:grid-cols-[1.1fr_0.9fr_0.9fr]" : "lg:grid-cols-[1.2fr_0.8fr]"
             }`}
           >
-            <div>
-              <Logo to="/" className="mb-3" />
-              <p className="max-w-xl text-sm leading-6 text-base-content/66 md:text-[0.92rem] md:leading-7">
+            <div className="min-w-0">
+              <Logo to="/" className="mb-2 [&_img]:!h-5 [&_img]:sm:!h-6" />
+              <p className="max-w-xl text-sm leading-5 text-base-content/66 md:text-[0.9rem] md:leading-6">
                 {footer.tagline}
               </p>
               {showShop ? (
-                <p className="mt-3 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-primary">
+                <p className="mt-2 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-primary">
                   {shopConfig.brand.tagline}
                 </p>
               ) : null}
-              <div className="mt-4 flex flex-wrap gap-3">
-                <a className="premium-button-ghost inline-flex h-9 w-9 items-center justify-center" href="#" aria-label="Facebook">
-                  <span className="material-symbols-outlined text-[1.05rem]">facebook</span>
+              <div className="mt-3 flex flex-wrap gap-2.5">
+                <a className="premium-button-ghost inline-flex h-8 w-8 items-center justify-center" href="#" aria-label="Facebook">
+                  <span className="material-symbols-outlined text-[1rem]">facebook</span>
                 </a>
                 <a
-                  className="premium-button-ghost inline-flex h-9 w-9 items-center justify-center"
+                  className="premium-button-ghost inline-flex h-8 w-8 items-center justify-center"
                   href={shopConfig.social.instagram}
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
                 >
-                  <span className="material-symbols-outlined text-[1.05rem]">photo_camera</span>
+                  <span className="material-symbols-outlined text-[1rem]">photo_camera</span>
                 </a>
-                <a className="premium-button-ghost inline-flex h-9 w-9 items-center justify-center" href="#" aria-label="Music">
-                  <span className="material-symbols-outlined text-[1.05rem]">music_note</span>
+                <a className="premium-button-ghost inline-flex h-8 w-8 items-center justify-center" href="#" aria-label="Music">
+                  <span className="material-symbols-outlined text-[1rem]">music_note</span>
                 </a>
               </div>
             </div>
@@ -104,7 +104,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-5 flex flex-col gap-2 border-t border-white/8 pt-4 text-[0.65rem] uppercase tracking-[0.18em] text-base-content/45 sm:text-xs md:flex-row md:items-center md:justify-between">
+          <div className="mt-4 flex flex-col gap-2 border-t border-white/8 pt-3 text-[0.65rem] uppercase tracking-[0.18em] text-base-content/45 sm:text-xs md:flex-row md:items-center md:justify-between">
             <p>{footer.legal}</p>
             {showShop ? <p>NRE Apparel · NuRock Entertainment</p> : <p>NuRock Entertainment</p>}
           </div>
