@@ -8,11 +8,11 @@ export const productionLessonsCopy = {
     tagline:
       "One-on-one sessions with producers and engineers who’ve shipped records. Learn beat-making, mixing, and sound design in a real studio environment—no fluff, just hands-on skills.",
     subline:
-      "Use the button below to open the booking scheduler in a new tab and reserve your lesson.",
+      "Ready to learn in the room? Book a lesson and start building release-ready skills.",
   },
   cta: {
-    label: "Open booking scheduler",
-    openInNewTab: true,
+    label: "Book a lesson",
+    openInNewTab: false,
   },
   features: [
     {

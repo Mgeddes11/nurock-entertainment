@@ -72,7 +72,7 @@ export function Navigation() {
                 ) : null}
               </button>
             ) : null}
-            <Link to="/studio-sessions#book" className="hidden shrink-0 md:inline-flex">
+            <Link to="/booking" className="hidden shrink-0 md:inline-flex">
               <ButtonPrimary>Book Session</ButtonPrimary>
             </Link>
           </div>
@@ -90,7 +90,7 @@ export function Navigation() {
               </NavLink>
             ))}
             <Link
-              to="/studio-sessions#book"
+              to="/booking"
               className="shrink-0 whitespace-nowrap rounded-lg bg-primary px-3 py-2 text-[0.68rem] font-extrabold uppercase tracking-[0.18em] text-primary-content md:hidden"
             >
               Book

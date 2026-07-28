@@ -5,6 +5,7 @@ import { HomePage } from "./pages/HomePage";
 import { ContactsPage } from "./pages/ContactsPage";
 import { ProductionLessonsPage } from "./pages/ProductionLessonsPage";
 import { StudioSessionsPage } from "./pages/StudioSessionsPage";
+import { BookingPage } from "./pages/BookingPage";
 import { InstrumentalsPage } from "./pages/InstrumentalsPage";
 import { LiveEventsPage } from "./pages/LiveEventsPage";
 import { ArtistDevelopmentPage } from "./pages/ArtistDevelopmentPage";
@@ -31,6 +32,7 @@ function App() {
             <Route path="contacts" element={<ContactsPage />} />
             <Route path="production-lessons" element={<ProductionLessonsPage />} />
             <Route path="studio-sessions" element={<StudioSessionsPage />} />
+            <Route path="booking" element={<BookingPage />} />
             <Route path="instrumentals" element={<InstrumentalsPage />} />
             <Route path="live-events" element={<LiveEventsPage />} />
             <Route path="artist-development" element={<ArtistDevelopmentPage />} />

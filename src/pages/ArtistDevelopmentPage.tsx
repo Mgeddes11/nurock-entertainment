@@ -44,7 +44,7 @@ export function ArtistDevelopmentPage() {
             </p>
           </div>
 
-          <Link to="/studio-sessions">
+          <Link to="/booking">
             <ButtonPrimary className="px-8 py-4 text-[0.78rem]">{artistDevelopment.cta}</ButtonPrimary>
           </Link>
         </div>

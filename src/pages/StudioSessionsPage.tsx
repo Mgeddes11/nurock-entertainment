@@ -1,9 +1,6 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { StudioFeatureCard } from "../components/molecules/StudioFeatureCard";
-import { BookingRequestForm } from "../components/organisms/BookingRequestForm";
-import { HubSpotMeetingEmbed } from "../components/organisms/HubSpotMeetingEmbed";
-import { hubspot } from "../config/hubspot";
 import { studioSessionsCopy } from "../data/studioSessionsCopy";
 
 const INTRO_BG_IMAGE =
@@ -11,16 +8,14 @@ const INTRO_BG_IMAGE =
 
 export function StudioSessionsPage() {
   const { intro, pricing, cta, features } = studioSessionsCopy;
-  const meetingUrl = hubspot.meetingUrlSessions;
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (location.hash !== "#book") return;
-    const timer = window.setTimeout(() => {
-      document.getElementById("book")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-    return () => window.clearTimeout(timer);
-  }, [location.hash]);
+    if (location.hash === "#book" || location.hash === "#request") {
+      navigate("/booking", { replace: true });
+    }
+  }, [location.hash, navigate]);
 
   return (
     <div className="py-8 pb-16 sm:py-10">
@@ -52,40 +47,16 @@ export function StudioSessionsPage() {
                 {pricing.detail}
               </p>
             </div>
-            <a
-              href="#book"
+            <Link
+              to="/booking"
               className="premium-button inline-flex items-center gap-2 px-8 py-4 text-[0.78rem] font-extrabold uppercase tracking-[0.26em]"
             >
               {cta.label}
               <span className="material-symbols-outlined text-xl inline-block" aria-hidden>
                 calendar_month
               </span>
-            </a>
+            </Link>
           </div>
-        </div>
-      </section>
-
-      <section id="book" className="page-section mb-16 md:mb-20 scroll-mt-28">
-        <div className="panel-surface mx-auto max-w-5xl overflow-hidden rounded-[2rem] p-5 sm:p-7 md:p-8">
-          <span className="eyebrow-label mb-4">Book a session</span>
-          <h2 className="lux-heading mb-6 text-3xl uppercase text-base-content md:text-4xl">
-            Choose your time
-          </h2>
-          <HubSpotMeetingEmbed meetingUrl={meetingUrl} />
-        </div>
-      </section>
-
-      <section id="request" className="page-section mb-16 md:mb-20 scroll-mt-28">
-        <div className="panel-surface mx-auto max-w-3xl rounded-[2rem] p-5 sm:p-7 md:p-8">
-          <span className="eyebrow-label mb-4">Always works</span>
-          <h2 className="lux-heading mb-3 text-3xl uppercase text-base-content md:text-4xl">
-            Request a booking by email
-          </h2>
-          <p className="mb-8 text-base leading-7 text-base-content/68">
-            Prefer not to use the calendar? Send a booking request and it goes straight to{" "}
-            <span className="text-primary">Hollynurock@nurockentertainment.com</span>.
-          </p>
-          <BookingRequestForm />
         </div>
       </section>
 

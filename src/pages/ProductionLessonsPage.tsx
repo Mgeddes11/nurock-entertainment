@@ -1,10 +1,9 @@
+import { Link } from "react-router-dom";
 import { StudioFeatureCard } from "../components/molecules/StudioFeatureCard";
-import { hubspot } from "../config/hubspot";
 import { productionLessonsCopy } from "../data/productionLessonsCopy";
 
 export function ProductionLessonsPage() {
   const { intro, cta, features } = productionLessonsCopy;
-  const meetingUrl = hubspot.meetingUrlLessons || hubspot.meetingUrlSessions;
 
   return (
     <div className="py-8 pb-16 sm:py-10">
@@ -17,19 +16,15 @@ export function ProductionLessonsPage() {
           <div className="gold-rule mt-5 mb-8" />
           <p className="mb-6 text-xl leading-8 text-base-content/84">{intro.tagline}</p>
           <p className="mb-10 text-base leading-8 text-base-content/58">{intro.subline}</p>
-          {meetingUrl && (
-            <a
-              href={meetingUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="premium-button inline-flex items-center gap-2 px-8 py-4 text-[0.78rem] font-extrabold uppercase tracking-[0.26em]"
-            >
-              {cta.label}
-              <span className="material-symbols-outlined text-xl inline-block" aria-hidden>
-                open_in_new
-              </span>
-            </a>
-          )}
+          <Link
+            to="/booking"
+            className="premium-button inline-flex items-center gap-2 px-8 py-4 text-[0.78rem] font-extrabold uppercase tracking-[0.26em]"
+          >
+            {cta.label}
+            <span className="material-symbols-outlined text-xl inline-block" aria-hidden>
+              calendar_month
+            </span>
+          </Link>
         </div>
       </section>
 

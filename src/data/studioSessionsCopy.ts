@@ -10,7 +10,7 @@ export const studioSessionsCopy = {
     tagline2:
       "Whether you connect remotely through Muse or join us in person, Holly personally tailors every session to you, creating a comfortable, inspiring space where you're fully ready to create.",
     subline:
-      "Reserve your slot below or use the button to open the scheduler in a new tab.",
+      "From tracking to final mix-down — a focused room built to bring out your best. Ready when you are.",
   },
   pricing: {
     label: "Studio Sessions",
@@ -18,8 +18,8 @@ export const studioSessionsCopy = {
     detail: "Based on project",
   },
   cta: {
-    label: "Open booking scheduler",
-    openInNewTab: true,
+    label: "Book a session",
+    openInNewTab: false,
   },
   features: [
     {
