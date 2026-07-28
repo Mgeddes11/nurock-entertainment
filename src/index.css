@@ -379,6 +379,25 @@ img {
 }
 
 
+@keyframes credentials-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.credentials-ticker {
+  animation: credentials-ticker 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .credentials-ticker {
+    animation: none;
+  }
+}
+
 /* NRE Apparel — darker fashion layer on top of NuRock theme */
 .nre-shop {
   --nre-black: #080706;

@@ -22,7 +22,7 @@ export type ArtistEntry = {
 export const musicPageCopy = {
   pageTitle: "Music",
   pageIntro:
-    "Original production, artist collaborations, and a catalog shaped for artists, labels, and sync — backed by television placements, radio, and work out of DJ Skee’s Skee Lodge.",
+    "Original production, artist collaborations, and a catalog shaped for artists, labels, and sync.",
 
   artistSection: {
     eyebrow: "Selected Collaborations",

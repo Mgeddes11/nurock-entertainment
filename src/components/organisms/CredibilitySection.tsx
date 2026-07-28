@@ -1,53 +1,50 @@
-import { credentialsCopy, type Credential } from "../../data/credentialsCopy";
-
-const markClass: Record<string, string> = {
-  ae: "font-serif text-[1.65rem] font-bold tracking-[0.12em] md:text-[1.85rem]",
-  "x-factor": "text-[0.95rem] font-black tracking-[0.08em] md:text-[1.05rem]",
-  "us-radio": "text-[0.82rem] font-bold tracking-[0.22em] md:text-[0.88rem]",
-  "bbc-radio": "text-[0.82rem] font-bold tracking-[0.2em] md:text-[0.88rem]",
-  "skee-lodge": "text-[0.78rem] font-bold tracking-[0.16em] md:text-[0.84rem]",
-};
-
-function PressMark({ item }: { item: Credential }) {
-  return (
-    <div
-      className={`flex h-12 items-center justify-center text-base-content ${markClass[item.id] ?? "text-sm font-bold tracking-widest"}`}
-      aria-hidden
-    >
-      {item.name.toUpperCase()}
-    </div>
-  );
-}
+import { credentialsCopy } from "../../data/credentialsCopy";
 
 export function CredibilitySection() {
-  const { eyebrow, title, intro, items } = credentialsCopy;
+  const { eyebrow, items } = credentialsCopy;
+  const tape = [...items, ...items];
 
   return (
-    <section id="placements" className="mb-16 scroll-mt-28 md:mb-20" aria-labelledby="credentials-heading">
-      <div className="panel-surface rounded-[2rem] p-6 sm:p-8 md:p-10">
-        <span className="eyebrow-label mb-4">{eyebrow}</span>
-        <h2 id="credentials-heading" className="lux-heading text-3xl uppercase text-base-content md:text-5xl">
-          {title}
-        </h2>
-        <div className="gold-rule mt-5 mb-6" />
-        <p className="max-w-3xl text-base leading-8 text-base-content/72">{intro}</p>
-
-        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-5">
-          {items.map((item) => (
-            <li
-              key={item.id}
-              className="flex flex-col items-center rounded-[1.25rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-black/30 px-3 py-5 text-center sm:px-4 sm:py-6"
-            >
-              <PressMark item={item} />
-              <p className="mt-4 text-[0.62rem] font-bold uppercase tracking-[0.22em] text-primary/90">
-                {item.caption}
-              </p>
-              <p className="mt-2 text-[0.72rem] leading-5 text-base-content/68 sm:text-xs">
-                {item.detail}
-              </p>
-            </li>
-          ))}
-        </ul>
+    <section
+      id="placements"
+      className="mb-10 scroll-mt-28 md:mb-12"
+      aria-label={eyebrow}
+    >
+      <div className="overflow-hidden rounded-full border border-white/10 bg-black/35 py-2.5 pl-4 pr-0 sm:pl-5">
+        <div className="flex items-center gap-4">
+          <span className="shrink-0 text-[0.58rem] font-bold uppercase tracking-[0.28em] text-primary">
+            {eyebrow}
+          </span>
+          <span className="hidden h-3 w-px shrink-0 bg-white/15 sm:block" aria-hidden />
+          <div
+            className="min-w-0 flex-1 overflow-hidden"
+            style={{
+              maskImage: "linear-gradient(90deg, transparent, black 6%, black 94%, transparent)",
+              WebkitMaskImage: "linear-gradient(90deg, transparent, black 6%, black 94%, transparent)",
+            }}
+          >
+            <ul className="credentials-ticker flex w-max items-center gap-0" aria-hidden>
+              {tape.map((item, i) => (
+                <li
+                  key={`${item.id}-${i}`}
+                  className="flex items-center gap-3 px-4 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-base-content/80 sm:text-[0.74rem]"
+                >
+                  <span>{item.name}</span>
+                  <span className="text-primary/70" aria-hidden>
+                    ·
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <ul className="sr-only">
+              {items.map((item) => (
+                <li key={item.id}>
+                  {item.name}: {item.detail}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );
