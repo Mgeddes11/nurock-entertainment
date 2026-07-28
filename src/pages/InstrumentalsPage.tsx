@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArtistSection } from "../components/organisms/ArtistSection";
+import { CredibilitySection } from "../components/organisms/CredibilitySection";
 import { ButtonPrimary } from "../components/atoms/ButtonPrimary";
 import { musicPageCopy } from "../data/musicPageCopy";
 
 export function InstrumentalsPage() {
-  const { pageTitle, buyoutsSection } = musicPageCopy;
+  const { pageTitle, buyoutsSection, pageIntro } = musicPageCopy;
 
   const PAGE_BG =
     "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1920&q=80";
@@ -19,10 +20,28 @@ export function InstrumentalsPage() {
       <div className="absolute inset-0 bg-base-100/38 md:bg-base-100/62" aria-hidden />
       <div className="relative z-10 px-6">
         <div className="mx-auto max-w-6xl">
-          <h1 className="mb-2 text-4xl font-black uppercase tracking-tighter text-base-content md:text-5xl">
-            {pageTitle}
-          </h1>
-          <div className="mb-12 h-1 w-24 bg-primary md:mb-16" />
+          <header className="mb-12 md:mb-16">
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+              <img
+                src="/logo.svg"
+                alt="NuRock Entertainment"
+                className="h-8 w-auto opacity-95 sm:h-9"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+              <span className="text-[0.65rem] font-bold uppercase tracking-[0.28em] text-primary">
+                Production · Placements · Catalog
+              </span>
+            </div>
+            <h1 className="mb-3 text-4xl font-black uppercase tracking-tighter text-base-content md:text-5xl">
+              {pageTitle}
+            </h1>
+            <div className="mb-6 h-1 w-24 bg-primary" />
+            <p className="max-w-3xl text-base leading-8 text-base-content/75 md:text-lg md:leading-9">
+              {pageIntro}
+            </p>
+          </header>
+
+          <CredibilitySection />
 
           <section id="buyouts" className="mb-16 scroll-mt-28 md:mb-20">
             <div className="panel-surface rounded-[2rem] p-6 sm:p-8 md:p-10">

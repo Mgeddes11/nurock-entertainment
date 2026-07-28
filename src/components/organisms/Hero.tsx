@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { siteCopy } from "../../data/siteCopy";
 
 export function Hero() {
@@ -21,13 +22,16 @@ export function Hero() {
       <div className="page-section relative z-20 w-full">
         <div className="panel-surface mx-auto max-w-4xl rounded-[2rem] p-6 sm:p-8 md:p-10 lg:p-12">
           <span className="eyebrow-label mb-6">NuRock Entertainment</span>
-          <h1 className="mb-6 md:mb-10">
+          <h1 className="mb-6 md:mb-8">
             <img
               src="/logo-hero.svg"
               alt="NuRock Entertainment"
               className="logo-neon-glow h-16 w-auto max-w-full object-contain object-left sm:h-20 md:h-28 lg:h-32"
             />
           </h1>
+          <p className="mb-6 max-w-3xl text-[0.72rem] font-bold uppercase tracking-[0.22em] text-primary/95 md:text-[0.78rem]">
+            A&amp;E · X Factor artists · US Radio · BBC Radio · Skee Lodge
+          </p>
           <p className="max-w-3xl text-base leading-8 text-base-content/82 md:text-lg md:leading-9">
             {hero.tagline.split("NuRock Entertainment").map((part, i, arr) =>
               i < arr.length - 1 ? (
@@ -40,6 +44,17 @@ export function Hero() {
               )
             )}
           </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link to="/studio-sessions#book" className="premium-button inline-flex px-7 py-3.5 text-[0.72rem]">
+              Book a Session
+            </Link>
+            <Link
+              to="/instrumentals#placements"
+              className="premium-button-ghost inline-flex rounded-full px-7 py-3.5 text-[0.72rem] font-extrabold uppercase tracking-[0.22em]"
+            >
+              View Credentials
+            </Link>
+          </div>
         </div>
       </div>
     </section>
