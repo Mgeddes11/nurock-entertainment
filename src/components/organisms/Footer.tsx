@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Logo } from "../atoms/Logo";
 import { siteCopy } from "../../data/siteCopy";
 import { shopConfig } from "../../data/shop/shopConfig";
 import { useShopChrome } from "../../hooks/useShopChrome";
@@ -39,7 +38,6 @@ export function Footer() {
             }`}
           >
             <div className="flex min-w-0 flex-col justify-center">
-              <Logo to="/" className="mb-2 [&_img]:!h-5 [&_img]:sm:!h-5" />
               <p className="max-w-xl text-sm leading-6 text-base-content/66 md:text-[0.9rem]">
                 {footer.tagline}
               </p>
