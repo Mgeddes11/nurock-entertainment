@@ -20,11 +20,12 @@ export function Hero() {
 
       <div className="page-section relative z-20 w-full">
         <div className="panel-surface mx-auto max-w-4xl rounded-[2rem] p-6 sm:p-8 md:p-10 lg:p-12">
+          <span className="eyebrow-label mb-6">NuRock Entertainment</span>
           <h1 className="mb-6 md:mb-10">
             <img
-              src="/logo-hero.png"
+              src="/logo-hero.svg"
               alt="NuRock Entertainment"
-              className="logo-hero-mark mx-auto h-auto w-full max-w-[13.5rem] object-contain sm:max-w-[16rem] md:max-w-[19rem] lg:max-w-[22rem]"
+              className="logo-neon-glow h-16 w-auto max-w-full object-contain object-left sm:h-20 md:h-28 lg:h-32"
             />
           </h1>
           <p className="max-w-3xl text-base leading-8 text-base-content/82 md:text-lg md:leading-9">

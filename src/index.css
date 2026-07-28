@@ -152,12 +152,6 @@ img {
     drop-shadow(0 0 42px rgb(var(--glow-red) / 0.16));
 }
 
-.logo-hero-mark {
-  filter: drop-shadow(0 8px 24px rgb(0 0 0 / 0.45))
-    drop-shadow(0 0 18px rgb(184 138 24 / 0.22))
-    drop-shadow(0 0 40px rgb(184 138 24 / 0.12));
-}
-
 .page-shell {
   position: relative;
   isolation: isolate;
