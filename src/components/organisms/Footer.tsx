@@ -13,19 +13,16 @@ const shopLinks = [
   { label: "Returns", to: "/shop/returns" },
 ];
 
-const legalLinksPublic = [{ label: "Contact", to: "/contacts" }];
-
 const legalLinksWithShop = [
   { label: "Privacy", to: "/shop/privacy" },
   { label: "Terms", to: "/shop/terms" },
-  { label: "Contact", to: "/contacts" },
   { label: "FAQ", to: "/shop/faq" },
 ];
 
 export function Footer() {
   const { footer } = siteCopy;
   const showShop = useShopChrome();
-  const legalLinks = showShop ? legalLinksWithShop : legalLinksPublic;
+  const legalLinks = showShop ? legalLinksWithShop : [];
 
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-[linear-gradient(180deg,rgba(30,24,18,0.92),rgba(18,14,10,0.94))] py-16 md:py-20">
@@ -93,15 +90,17 @@ export function Footer() {
               >
                 {footer.connect.email}
               </a>
-              <ul className="mt-6 space-y-2">
-                {legalLinks.map((l) => (
-                  <li key={l.to}>
-                    <Link to={l.to} className="text-xs uppercase tracking-[0.18em] text-base-content/55 hover:text-primary">
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              {legalLinks.length > 0 ? (
+                <ul className="mt-6 space-y-2">
+                  {legalLinks.map((l) => (
+                    <li key={l.to}>
+                      <Link to={l.to} className="text-xs uppercase tracking-[0.18em] text-base-content/55 hover:text-primary">
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
           </div>
 
