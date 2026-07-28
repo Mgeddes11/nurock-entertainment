@@ -32,14 +32,14 @@ export function Footer() {
       </div>
 
       <div className="page-section relative">
-        <div className="panel-surface rounded-[1.5rem] p-4 sm:p-5 md:p-6">
+        <div className="panel-surface rounded-[1.5rem] px-4 pb-4 pt-3 sm:px-5 sm:pb-5 sm:pt-3.5 md:px-6 md:pb-5 md:pt-4">
           <div
             className={`grid gap-4 md:gap-6 lg:items-start ${
               showShop ? "lg:grid-cols-[1.1fr_0.9fr_0.9fr]" : "lg:grid-cols-[1.2fr_0.8fr]"
             }`}
           >
             <div className="min-w-0">
-              <Logo to="/" className="mb-2 [&_img]:!h-5 [&_img]:sm:!h-6" />
+              <Logo to="/" className="mb-1.5 [&_img]:!h-5 [&_img]:sm:!h-5" />
               <p className="max-w-xl text-sm leading-5 text-base-content/66 md:text-[0.9rem] md:leading-6">
                 {footer.tagline}
               </p>
