@@ -11,10 +11,6 @@ export const credentialsCopy = {
   title: "Placements & Rooms",
   intro:
     "From network television and international radio to rooms that shaped modern hip-hop culture — Holly NuRock’s work has lived beyond the session.",
-  homeEyebrow: "Trusted Rooms",
-  homeTitle: "Built in the culture",
-  homeIntro:
-    "Music placements, radio, and production credits that speak before the session starts.",
   items: [
     {
       id: "ae",

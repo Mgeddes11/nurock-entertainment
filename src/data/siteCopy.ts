@@ -2,7 +2,7 @@ export const siteCopy = {
   hero: {
     headline: "NuRock Entertainment",
     tagline:
-      "NuRock Entertainment is a music production house and private teaching studio led by Holly NuRock — a producer with placements on A&E, BBC and US radio, work with X Factor–featured artists, and credits out of DJ Skee’s Skee Lodge. Through the NuRock Academy, artists learn real music production, hands-on arrangement, recording, mixing, and creative identity — true skill from the ground up, without relying on AI.",
+      "NuRock Entertainment is a music production house and private teaching studio led by Holly NuRock. Through the NuRock Academy, artists learn real music production, hands on arrangement, recording, mixing, and creative identity. Building true skill from the ground up without relying on AI.",
     ctaPrimary: "Book a Session",
     ctaSecondary: "View Vault",
   },

@@ -38,22 +38,6 @@ export function MeetHollyPage() {
                 <p>
                   Holly produces across every genre, from Hip-Hop and Dark Trap to R&amp;B, Pop, EDM, and cinematic records. He adapts to the artist while still bringing his own identity, taste, and energy to every track. Having worked with a wide range of artists, Holly knows how to create the kind of environment that pulls the best out of every session.
                 </p>
-                <p>
-                  His work has reached A&amp;E, artists featured on X Factor, radio placements across the United States and on BBC Radio, and sessions as a producer at DJ Skee&apos;s Skee Lodge — experience that informs every NuRock Academy lesson and studio record.
-                </p>
-              </div>
-
-              <div className="mt-10 rounded-[1.5rem] border border-white/10 bg-black/25 p-5 md:p-6">
-                <p className="mb-4 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-primary">
-                  Selected credentials
-                </p>
-                <ul className="space-y-2.5 text-sm leading-6 text-base-content/75">
-                  <li>Music placements on A&amp;E</li>
-                  <li>Worked with artists featured on X Factor</li>
-                  <li>Radio placements in the United States</li>
-                  <li>BBC Radio placements</li>
-                  <li>Producer at DJ Skee&apos;s Skee Lodge</li>
-                </ul>
               </div>
             </div>
           </div>

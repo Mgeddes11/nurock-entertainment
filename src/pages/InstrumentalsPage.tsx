@@ -21,17 +21,6 @@ export function InstrumentalsPage() {
       <div className="relative z-10 px-6">
         <div className="mx-auto max-w-6xl">
           <header className="mb-12 md:mb-16">
-            <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-              <img
-                src="/logo.svg"
-                alt="NuRock Entertainment"
-                className="h-8 w-auto opacity-95 sm:h-9"
-                style={{ filter: "brightness(0) invert(1)" }}
-              />
-              <span className="text-[0.65rem] font-bold uppercase tracking-[0.28em] text-primary">
-                Production · Placements · Catalog
-              </span>
-            </div>
             <h1 className="mb-3 text-4xl font-black uppercase tracking-tighter text-base-content md:text-5xl">
               {pageTitle}
             </h1>
