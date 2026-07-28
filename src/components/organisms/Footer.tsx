@@ -32,15 +32,15 @@ export function Footer() {
       </div>
 
       <div className="page-section relative">
-        <div className="panel-surface rounded-[1.5rem] p-4 sm:p-5 md:p-5">
+        <div className="panel-surface flex flex-col justify-between gap-6 rounded-[1.5rem] p-5 sm:gap-7 sm:p-6 md:gap-8 md:p-6">
           <div
-            className={`grid gap-4 md:gap-6 lg:items-start ${
-              showShop ? "lg:grid-cols-[1.1fr_0.9fr_0.9fr]" : "lg:grid-cols-[1.2fr_0.8fr]"
+            className={`grid gap-6 sm:gap-7 md:gap-8 lg:items-stretch ${
+              showShop ? "lg:grid-cols-[1.1fr_0.9fr_0.9fr]" : "lg:grid-cols-[1.15fr_0.85fr]"
             }`}
           >
-            <div className="min-w-0">
-              <Logo to="/" className="mb-1.5 [&_img]:!h-5 [&_img]:sm:!h-5" />
-              <p className="max-w-xl text-sm leading-5 text-base-content/66 md:text-[0.9rem] md:leading-6">
+            <div className="flex min-w-0 flex-col justify-center">
+              <Logo to="/" className="mb-2 [&_img]:!h-5 [&_img]:sm:!h-5" />
+              <p className="max-w-xl text-sm leading-6 text-base-content/66 md:text-[0.9rem]">
                 {footer.tagline}
               </p>
               {showShop ? (
@@ -68,7 +68,7 @@ export function Footer() {
             </div>
 
             {showShop ? (
-              <div>
+              <div className="flex flex-col justify-center">
                 <span className="eyebrow-label mb-3">NRE Apparel</span>
                 <ul className="space-y-2">
                   {shopLinks.map((l) => (
@@ -82,7 +82,7 @@ export function Footer() {
               </div>
             ) : null}
 
-            <div className="min-w-0 w-full rounded-[1.25rem] border border-white/8 bg-white/3 p-4 sm:p-5">
+            <div className="flex min-w-0 w-full flex-col justify-center rounded-[1.25rem] border border-white/8 bg-white/3 p-4 sm:p-5">
               <span className="eyebrow-label mb-3">Contact</span>
               <a
                 href={`mailto:${footer.connect.email}`}
@@ -104,7 +104,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-4 flex flex-col gap-2 border-t border-white/8 pt-3 text-[0.65rem] uppercase tracking-[0.18em] text-base-content/45 sm:text-xs md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col justify-center gap-2 border-t border-white/8 pt-5 text-[0.65rem] uppercase tracking-[0.18em] text-base-content/45 sm:pt-6 sm:text-xs md:flex-row md:items-center md:justify-between">
             <p>{footer.legal}</p>
             {showShop ? <p>NRE Apparel · NuRock Entertainment</p> : <p>NuRock Entertainment</p>}
           </div>
