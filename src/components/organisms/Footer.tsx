@@ -85,11 +85,11 @@ export function Footer() {
               </div>
             ) : null}
 
-            <div className="min-w-0 w-full rounded-[1.5rem] border border-white/8 bg-white/3 p-6 md:p-7">
+            <div className="min-w-0 w-full rounded-[1.5rem] border border-white/8 bg-white/3 p-5 sm:p-6 md:p-7">
               <span className="eyebrow-label mb-5">Contact</span>
               <a
                 href={`mailto:${footer.connect.email}`}
-                className="block break-all text-[0.78rem] font-semibold normal-case leading-7 tracking-normal text-base-content/82 hover:text-primary sm:text-sm sm:leading-8"
+                className="block max-w-full overflow-x-auto whitespace-nowrap text-[0.7rem] font-semibold normal-case leading-7 tracking-normal text-base-content/82 hover:text-primary sm:text-sm sm:leading-8"
               >
                 {footer.connect.email}
               </a>
