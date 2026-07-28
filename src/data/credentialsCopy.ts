@@ -7,7 +7,7 @@ export type Credential = {
 };
 
 export const credentialsCopy = {
-  eyebrow: "Credentials",
+  eyebrow: "Credits",
   title: "Placements & Rooms",
   intro:
     "From network television and international radio to rooms that shaped modern hip-hop culture — Holly NuRock’s work has lived beyond the session.",
