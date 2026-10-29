@@ -11,6 +11,7 @@ const baseNavItems = [
   { to: "/artist-development", label: "Academy" },
   { to: "/studio-sessions", label: "Studio" },
   { to: "/instrumentals", label: "Music" },
+  { to: "/pop-ups", label: "Pop Ups" },
   { to: "/contacts", label: "Contact" },
 ];
 
@@ -21,9 +22,9 @@ export function Navigation() {
   const showShop = useShopChrome();
   const navItems = showShop
     ? [
-        ...baseNavItems.slice(0, 5),
+        ...baseNavItems.slice(0, 6),
         shopNavItem,
-        ...baseNavItems.slice(5),
+        ...baseNavItems.slice(6),
       ]
     : baseNavItems;
 
