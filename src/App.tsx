@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartProvider } from "./commerce/cartContext";
 import { MainLayout } from "./templates/MainLayout";
 import { HomePage } from "./pages/HomePage";
@@ -8,7 +8,6 @@ import { StudioSessionsPage } from "./pages/StudioSessionsPage";
 import { BookingPage } from "./pages/BookingPage";
 import { InstrumentalsPage } from "./pages/InstrumentalsPage";
 import { LiveEventsPage } from "./pages/LiveEventsPage";
-import { PopUpsPage } from "./pages/PopUpsPage";
 import { ArtistDevelopmentPage } from "./pages/ArtistDevelopmentPage";
 import { MeetHollyPage } from "./pages/MeetHollyPage";
 import { ShopGate } from "./components/shop/ShopGate";
@@ -36,7 +35,7 @@ function App() {
             <Route path="booking" element={<BookingPage />} />
             <Route path="instrumentals" element={<InstrumentalsPage />} />
             <Route path="live-events" element={<LiveEventsPage />} />
-            <Route path="pop-ups" element={<PopUpsPage />} />
+            <Route path="pop-ups" element={<Navigate to="/" replace />} />
             <Route path="artist-development" element={<ArtistDevelopmentPage />} />
 
             <Route path="shop" element={<ShopGate><ShopHomePage /></ShopGate>} />
